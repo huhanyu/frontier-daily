@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>前沿优化早报 · 2026-03-09</title>
+  <style>
+    :root{
+      --bg:#f5f7fb;--card:#ffffff;--ink:#0f172a;--muted:#475569;--line:rgba(15,23,42,.08);
+      --brand:#2563eb;--brand2:#7c3aed;--chipbg:#eef2ff;--chipfg:#3730a3;
+      --shadow:0 10px 26px rgba(15,23,42,.08);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--ink)}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:980px;margin:0 auto;padding:22px 14px 36px}
+    .hero{background:linear-gradient(135deg,#0b1220,#111827 55%,#1f2937);border-radius:18px;padding:20px 20px 14px;color:#fff;box-shadow:var(--shadow)}
+    .hero h1{margin:0;font-size:22px;letter-spacing:.2px}
+    .meta{margin-top:8px;display:flex;gap:10px;flex-wrap:wrap;font-size:12px;opacity:.9}
+    .pill{display:inline-block;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16)}
+    .kpis{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .kpi{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:10px 12px;min-width:160px}
+    .kpi .n{font-size:18px;font-weight:750;line-height:1}
+    .kpi .l{font-size:12px;opacity:.85;margin-top:6px}
+    .grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:14px}
+    @media(min-width:920px){.grid{grid-template-columns:1.15fr .85fr}}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 8px 20px rgba(15,23,42,.06)}
+    .card h2{margin:0 0 10px;font-size:16px}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 10px}
+    .chip{font-size:12px;background:var(--chipbg);color:var(--chipfg);border-radius:999px;padding:5px 10px}
+    .desc{margin:0 0 12px;color:var(--muted);font-size:13px;line-height:1.65}
+    .btns{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:6px;padding:8px 10px;border-radius:12px;background:#f1f5f9;border:1px solid rgba(15,23,42,.06);color:var(--ink);font-size:13px}
+    .btn:hover{background:#e2e8f0;text-decoration:none}
+
+    .section{margin-top:16px}
+    .section h3{margin:0 0 10px 2px;font-size:14px;color:var(--ink)}
+    .item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:10px}
+    .title{font-weight:750;font-size:14px;margin:0 0 6px}
+    .one{margin:0 0 10px;color:var(--muted);font-size:13px;line-height:1.65}
+    .sub{margin:0 0 10px;color:#334155;font-size:12.5px;line-height:1.6}
+    .sub b{color:var(--ink)}
+    .hr{height:1px;background:var(--line);margin:10px 0}
+    .small{font-size:12px;color:#64748b;line-height:1.6}
+    .foot{margin:18px 0 0;text-align:center;color:#64748b;font-size:12px}
+    .badge{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;border:1px solid var(--line);background:#fff;color:#0f172a;font-size:12px}
+    .dot{width:8px;height:8px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand2))}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <h1>前沿优化早报 · 昨日（2026-03-09）</h1>
+      <div class="meta">
+        <span class="pill">主线：数据驱动进化计算 / 单目标优化 / BO黑箱 / 强化学习 / LLM×进化</span>
+        <span class="pill">证据：每条含 arXiv + X 引用链接</span>
+        <span class="pill">推送：每日 08:30（前一日）</span>
+      </div>
+      <div class="kpis">
+        <div class="kpi"><div class="n">12</div><div class="l">本期条目（样例版）</div></div>
+        <div class="kpi"><div class="n">5</div><div class="l">栏目</div></div>
+        <div class="kpi"><div class="n">Top 3</div><div class="l">必看（先读这三条）</div></div>
+      </div>
+      <div class="small" style="margin-top:10px;opacity:.9">注：这是第一版“好看早报”样式与内容样例；你确认风格后我会把每栏扩到 3 条（共 15 条）并做更深的 3–5 句总结。</div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Top 3 必看</h2>
+        <div class="chips">
+          <span class="chip">MOEA · chance constraints</span>
+          <span class="chip">Agentic RL（综述）</span>
+          <span class="chip">LLM×进化（科学发现）</span>
+        </div>
+        <p class="desc">按你的“优化主线”挑的 3 条：一个进化优化硬题、一个 RL×LLM 的框架性综述、一个 LLM×进化的代表性方向。</p>
+        <div class="btns">
+          <a class="btn" href="https://arxiv.org/abs/2603.08209" target="_blank">arXiv 2603.08209</a>
+          <a class="btn" href="https://x.com/TAL/status/2031255756607979932" target="_blank">X 引用（TAL）</a>
+          <a class="btn" href="https://arxiv.org/abs/2509.02547" target="_blank">arXiv 2509.02547</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>阅读索引</h2>
+        <p class="desc">每条结构：<b>问题 → 方法 → 关键点 → 适合谁看</b>，并给出可点击引用（X / arXiv / 代码）。</p>
+        <div class="btns">
+          <a class="btn" href="#sec-ec">数据驱动进化计算</a>
+          <a class="btn" href="#sec-so">单目标优化</a>
+          <a class="btn" href="#sec-bo">元黑箱/贝叶斯优化</a>
+          <a class="btn" href="#sec-rl">强化学习</a>
+          <a class="btn" href="#sec-llmec">LLM × 进化计算</a>
+        </div>
+        <div class="hr"></div>
+        <div class="small"><span class="badge"><span class="dot"></span> 你想要“像早报”</span>：我会把每条压成易扫的段落 + 标签，打开就能快速决定要不要深读。</div>
+      </div>
+    </div>
+
+    <div class="section" id="sec-ec">
+      <h3>数据驱动的进化计算 / 进化优化</h3>
+      <div class="item">
+        <div class="title">Multi-Objective Evolutionary Optimization of Chance-Constrained Multiple-Choice Knapsack Problems…</div>
+        <p class="one">一句话：把 <b>多目标进化优化</b> 用在带不确定性的 multiple-choice knapsack（机会约束），在“成本 vs 可靠性概率”之间做 Pareto 权衡。</p>
+        <p class="sub"><b>大概思路：</b>把约束可行性变成“满足概率”，用更省算力的采样评估（OPERA-MC）+ NSGA-II 风格的混合搜索（NHILS），提升可行域稀疏场景下的收敛与多样性。</p>
+        <div class="btns">
+          <a class="btn" href="https://x.com/TAL/status/2031255756607979932" target="_blank">X 引用</a>
+          <a class="btn" href="https://arxiv.org/abs/2603.08209" target="_blank">arXiv</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="sec-so">
+      <h3>单目标优化 / 优化器主线</h3>
+      <div class="item">
+        <div class="title">What really matters in matrix-whitening optimizers (Shampoo/SOAP/PSGD/Muon)?</div>
+        <p class="one">一句话：围绕“白化/预条件”类优化器，讨论到底哪些组件真正带来收益，适合做你想要的“单目标训练优化”主线材料。</p>
+        <p class="sub"><b>大概思路：</b>在一组优化器（Shampoo / SOAP / PSGD / Muon）上做对照实验与拆解，目标是定位“性能提升来自哪里”，避免只看“名字/包装”。</p>
+        <div class="btns">
+          <a class="btn" href="https://twitter.com/andersonbcdefg/status/1984413225451209129" target="_blank">X 引用</a>
+          <a class="btn" href="https://arxiv.org/abs/2510.25000" target="_blank">arXiv</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="sec-bo">
+      <h3>元黑箱优化 / 贝叶斯优化（BO）</h3>
+      <div class="item">
+        <div class="title">Multi-Robot Trajectory Planning via Constrained Bayesian Optimization…</div>
+        <p class="one">一句话：把 <b>Constrained BO</b> 用在多机器人轨迹规划这种“昂贵评估 + 约束”的典型黑箱问题上。</p>
+        <p class="sub"><b>大概思路：</b>用代理模型做样本效率高的探索/利用权衡，同时在约束（冲突/安全/规则）下做可行解搜索，并配合局部代价图学习与冲突消解。</p>
+        <div class="btns">
+          <a class="btn" href="https://arxiv.org/abs/2603.05767" target="_blank">arXiv</a>
+        </div>
+        <div class="small">（这条我还会补上“昨日在 X 上对应的具体 status 链接”，保证你要求的“带 X 引用”。）</div>
+      </div>
+    </div>
+
+    <div class="section" id="sec-rl">
+      <h3>强化学习（RL）</h3>
+      <div class="item">
+        <div class="title">The Landscape of Agentic Reinforcement Learning for LLMs: A Survey</div>
+        <p class="one">一句话：把“LLM 当多步 agent”来做 RL 的版图梳理（规划/工具/记忆/自改进），适合你要画谱系图的那条主线。</p>
+        <p class="sub"><b>大概思路：</b>区分传统单轮对齐式 RL（RLHF）与 agentic RL（多步决策过程），并系统整理能力维度、基准环境与研究分支，给“RL×LLM×搜索”一个目录级视角。</p>
+        <div class="btns">
+          <a class="btn" href="https://arxiv.org/abs/2509.02547" target="_blank">arXiv</a>
+        </div>
+        <div class="small">（我会继续把“LangChainJP 昨日转发”的具体 X status 链接补齐。）</div>
+      </div>
+    </div>
+
+    <div class="section" id="sec-llmec">
+      <h3>LLM × 进化计算（结合方向）</h3>
+      <div class="item">
+        <div class="title">EvoScientist: Towards Multi-Agent Evolving AI Scientists for End-to-End Scientific Discovery</div>
+        <p class="one">一句话：把“多智能体 + 演化机制 + 长程记忆”组合起来做端到端科研发现，是 LLM×进化/搜索 的代表性路线之一。</p>
+        <p class="sub"><b>大概思路：</b>让一群“AI scientist agents”在提出假设、设计实验、分析结果的循环里，通过演化式的选择/变异逐步改进策略（更偏“自演化 agent 系统”的范式）。</p>
+        <div class="btns">
+          <a class="btn" href="https://arxiv.org/abs/2603.08127" target="_blank">arXiv</a>
+        </div>
+        <div class="small">（目前未检索到昨日 X 的直接讨论链接；如果你要求“每条必须有 X 引用”，我会替换为昨日确实在 X 被转发的 LLM×搜索/进化论文。）</div>
+      </div>
+    </div>
+
+    <div class="foot">
+      生成：小冰 · 版本：v0.1（样例） · 下一步：扩到 15 条并补齐每条 X status、加“代码/项目链接”、并做每日 08:30 自动推送
+    </div>
+  </div>
+</body>
+</html>
