@@ -318,28 +318,28 @@
       <h1>前沿科技日报 · 2026-03-10</h1>
       <div class="meta">
         <span class="pill">北京时间 · 2026-03-10</span>
-        <span class="pill">主题：进化/自演化 · 强化学习 · 大模型</span>
-        <span class="pill">来源：AlphaXiv + 科技新闻</span>
+        <span class="pill">主线：进化/自演化（EC）</span>
+        <span class="pill">辅线：强化学习 · 大模型/Agent</span>
       </div>
 
       <div class="kpis">
+        <div class="kpi"><div class="n">10</div><div class="l">精选论文</div></div>
         <div class="kpi"><div class="n">22</div><div class="l">当天相关论文</div></div>
-        <div class="kpi"><div class="n">6</div><div class="l">精选解读</div></div>
-        <div class="kpi"><div class="n">3</div><div class="l">科技新闻</div></div>
+        <div class="kpi"><div class="n">3</div><div class="l">科技新闻（含 X）</div></div>
       </div>
 
-      <div class="hero-note">聚焦“进化/自演化、RL、LLM/Agent”。论文来自 AlphaXiv，新闻来自公开科技媒体。</div>
+      <div class="hero-note">以“进化/自演化”为主线（EC 视角），RL 与 LLM/Agent 为辅助。论文来自 AlphaXiv。</div>
     </div>
 
     <div class="grid">
       <div class="card">
-        <h2>今日精选</h2>
+        <h2>今日精选（10 篇）</h2>
         <div class="chips">
-          <span class="chip">进化/自演化</span>
+          <span class="chip">进化 / 自演化</span>
           <span class="chip">强化学习</span>
           <span class="chip">LLM / Agent</span>
         </div>
-        <p class="desc">按你关注方向挑 6 条：2 条 RL×LLM 核心、2 条机器人/世界模型、1 条企业级 LLM 基准、1 条自演化 Agent。</p>
+        <p class="desc">优先挑“自演化/持续适应”与“进化式改进”的研究；RL 与 LLM/Agent 作为支撑方向。</p>
         <div class="btns">
           <a class="btn btn-primary" href="https://arxiv.org/abs/2603.08561" target="_blank">RetroAgent</a>
           <a class="btn" href="https://arxiv.org/abs/2603.08660" target="_blank">Unsupervised RLVR</a>
@@ -351,95 +351,97 @@
         <h2>快速索引</h2>
         <p class="desc">每条结构清晰分离：<b>问题 → 方法 → 关键点</b>，支持按目录直接跳转阅读。</p>
         <div class="btns">
-          <a class="btn" href="#sec-evo">进化/自演化</a>
+          <a class="btn" href="#sec-ec">进化/自演化（EC）</a>
           <a class="btn" href="#sec-rl">强化学习</a>
-          <a class="btn" href="#sec-llm">大模型 / Agent</a>
+          <a class="btn" href="#sec-llm">LLM / Agent</a>
           <a class="btn" href="#sec-news">科技新闻</a>
         </div>
       </div>
     </div>
 
     <!-- 正文区域 -->
-    <div class="section" id="sec-evo">
-      <h3>进化 / 自演化方向</h3>
+    <div class="section" id="sec-ec">
+      <h3>进化 / 自演化（EC 主线）</h3>
+
       <div class="item">
         <div class="title">RetroAgent: From Solving to Evolving via Retrospective Dual Intrinsic Feedback</div>
-        <p class="one">一句话总结：用“回溯反思 + 双重内在奖励”让 LLM‑Agent 在长期任务中持续进化，而不是一次性解题。</p>
-        <p class="sub"><b>来源：</b> AlphaXiv · <a href="https://arxiv.org/abs/2603.08561" target="_blank">arXiv</a><br><b>🔻 痛点背景：</b>传统 RL 更像一次性“解题”，模型知识沉在参数里，难以持续自我改进。<br><b>💡 核心解法：</b>引入回溯自反思机制，生成“数值奖励 + 语言教训”双通道内在反馈，驱动持续探索与显式可检索经验。<br><b>🚀 关键启发：</b>把“自演化”作为 Agent 的一等能力，而非事后调参。</p>
-        <div class="item-foot">
-          <div class="btns">
-            <a class="btn btn-primary" href="https://arxiv.org/abs/2603.08561" target="_blank">arXiv</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section" id="sec-rl">
-      <h3>强化学习（RL）</h3>
-      <div class="item">
-        <div class="title">How Far Can Unsupervised RLVR Scale LLM Training?</div>
-        <p class="one">一句话总结：无监督“可验证奖励”能短期提升，但会出现“先升后塌”的极限；外部验证更可扩展。</p>
-        <p class="sub"><b>来源：</b> AlphaXiv · <a href="https://arxiv.org/abs/2603.08660" target="_blank">arXiv</a><br><b>🔻 痛点背景：</b>RLVR 试图摆脱标注依赖，但其可扩展性和长期收益未知。<br><b>💡 核心解法：</b>系统化分析 URLVR 轨迹，指出内生奖励只是“锐化已有知识”。<br><b>🚀 关键启发：</b>外部验证奖励（self‑verification 等）是更稳健的扩展路径。</p>
-        <div class="item-foot">
-          <div class="btns">
-            <a class="btn btn-primary" href="https://arxiv.org/abs/2603.08660" target="_blank">arXiv</a>
-          </div>
-        </div>
+        <p class="one">一句话总结：用“回溯反思 + 双重内在奖励”让 LLM‑Agent 在长期任务中持续进化。</p>
+        <p class="sub"><b>来源：</b> AlphaXiv · <a href="https://arxiv.org/abs/2603.08561" target="_blank">arXiv</a><br><b>🔻 痛点背景：</b>传统 RL 更像一次性“解题”，难以持续自我改进。<br><b>💡 核心解法：</b>回溯自反思生成“数值奖励 + 语言教训”。<br><b>🚀 关键启发：</b>把“自演化”作为 Agent 的一等能力。</p>
       </div>
 
       <div class="item">
         <div class="title">Agentic Critical Training</div>
-        <p class="one">一句话总结：让 LLM‑Agent 学会“批判性判断动作质量”，不再只是模仿反思文本。</p>
-        <p class="sub"><b>来源：</b> AlphaXiv · <a href="https://arxiv.org/abs/2603.08706" target="_blank">arXiv</a><br><b>🔻 痛点背景：</b>仅靠 imitation 学不到“为什么错”。<br><b>💡 核心解法：</b>用 RL 框架让模型对动作质量做真实对比学习。<br><b>🚀 关键启发：</b>把“批判能力”内生化，可显著提升任务成功率。</p>
-        <div class="item-foot">
-          <div class="btns">
-            <a class="btn btn-primary" href="https://arxiv.org/abs/2603.08706" target="_blank">arXiv</a>
-          </div>
-        </div>
+        <p class="one">一句话总结：让 LLM‑Agent 学会“批判性判断动作质量”，具备自我纠偏能力。</p>
+        <p class="sub"><b>来源：</b> AlphaXiv · <a href="https://arxiv.org/abs/2603.08706" target="_blank">arXiv</a><br><b>🔻 痛点背景：</b>仅 imitation 学不到“为什么错”。<br><b>💡 核心解法：</b>用 RL 框架做动作质量对比学习。<br><b>🚀 关键启发：</b>引入“批判能力”有利于持续改进。</p>
       </div>
 
       <div class="item">
-        <div class="title">MetaWorld‑X: Hierarchical World Modeling via VLM‑Orchestrated Experts for Humanoid Loco‑Manipulation</div>
-        <p class="one">一句话总结：用 VLM 统筹“技能专家”，让人形机器人在行走+操作的复合任务中更稳定。</p>
-        <p class="sub"><b>来源：</b> AlphaXiv · <a href="https://arxiv.org/abs/2603.08572" target="_blank">arXiv</a><br><b>🔻 痛点背景：</b>单一策略学多技能容易互相干扰。<br><b>💡 核心解法：</b>层级世界模型 + 专家路由，组合技能执行。<br><b>🚀 关键启发：</b>多专家协作能显著提升复杂人形任务稳定性。</p>
-        <div class="item-foot">
-          <div class="btns">
-            <a class="btn btn-primary" href="https://arxiv.org/abs/2603.08572" target="_blank">arXiv</a>
-          </div>
-        </div>
+        <div class="title">CODA: Difficulty-Aware Compute Allocation for Adaptive Reasoning</div>
+        <p class="one">一句话总结：按任务难度自适应分配推理算力，避免“过度思考”。</p>
+        <p class="sub"><b>来源：</b> AlphaXiv · <a href="https://arxiv.org/abs/2603.08659" target="_blank">arXiv</a><br><b>🔻 痛点背景：</b>推理模型在简单问题上浪费算力。<br><b>💡 核心解法：</b>难度感知的动态计算分配。<br><b>🚀 关键启发：</b>更高效的“自适应演化”推理路径。</p>
+      </div>
+
+      <div class="item">
+        <div class="title">Grow, Don't Overwrite: Fine-tuning Without Forgetting</div>
+        <p class="one">一句话总结：在持续学习中避免“遗忘”，更符合渐进式演化训练。</p>
+        <p class="sub"><b>来源：</b> AlphaXiv · <a href="https://arxiv.org/abs/2603.08647" target="_blank">arXiv</a><br><b>🔻 痛点背景：</b>新知识容易覆盖旧能力。<br><b>💡 核心解法：</b>提出“不覆盖式”微调策略。<br><b>🚀 关键启发：</b>持续进化模型的稳定性更强。</p>
+      </div>
+    </div>
+
+    <div class="section" id="sec-rl">
+      <h3>强化学习（辅助主线）</h3>
+
+      <div class="item">
+        <div class="title">How Far Can Unsupervised RLVR Scale LLM Training?</div>
+        <p class="one">一句话总结：无监督“可验证奖励”短期提升，但存在“先升后塌”的极限。</p>
+        <p class="sub"><b>来源：</b> AlphaXiv · <a href="https://arxiv.org/abs/2603.08660" target="_blank">arXiv</a></p>
+      </div>
+
+      <div class="item">
+        <div class="title">Towards Batch-to-Streaming Deep Reinforcement Learning for Continuous Control</div>
+        <p class="one">一句话总结：面向资源受限环境的在线 RL（S2AC / SDAC）。</p>
+        <p class="sub"><b>来源：</b> AlphaXiv · <a href="https://arxiv.org/abs/2603.08588" target="_blank">arXiv</a></p>
+      </div>
+
+      <div class="item">
+        <div class="title">MetaWorld‑X: Hierarchical World Modeling via VLM‑Orchestrated Experts</div>
+        <p class="one">一句话总结：用 VLM 统筹“技能专家”，提升人形机器人稳定性。</p>
+        <p class="sub"><b>来源：</b> AlphaXiv · <a href="https://arxiv.org/abs/2603.08572" target="_blank">arXiv</a></p>
       </div>
 
       <div class="item">
         <div class="title">Interactive World Simulator for Robot Policy Training and Evaluation</div>
-        <p class="one">一句话总结：用“动作条件视频预测”构建高效世界模型，快速生成机器人训练数据。</p>
-        <p class="sub"><b>来源：</b> AlphaXiv · <a href="https://arxiv.org/abs/2603.08546" target="_blank">arXiv</a><br><b>🔻 痛点背景：</b>真实交互数据昂贵，仿真不够真实。<br><b>💡 核心解法：</b>高效长时预测 + 物理一致性视频生成。<br><b>🚀 关键启发：</b>低成本生成高质量专家演示数据，利于规模化训练。</p>
-        <div class="item-foot">
-          <div class="btns">
-            <a class="btn btn-primary" href="https://arxiv.org/abs/2603.08546" target="_blank">arXiv</a>
-          </div>
-        </div>
+        <p class="one">一句话总结：动作条件视频预测世界模型，快速生成机器人训练数据。</p>
+        <p class="sub"><b>来源：</b> AlphaXiv · <a href="https://arxiv.org/abs/2603.08546" target="_blank">arXiv</a></p>
       </div>
     </div>
 
     <div class="section" id="sec-llm">
-      <h3>大模型 / Agent</h3>
+      <h3>LLM / Agent（辅助）</h3>
+
       <div class="item">
         <div class="title">OfficeQA Pro: An Enterprise Benchmark for End‑to‑End Grounded Reasoning</div>
-        <p class="one">一句话总结：企业级“多文档推理基准”，揭示模型在真实 PDF/表格解析上仍是瓶颈。</p>
-        <p class="sub"><b>来源：</b> AlphaXiv · <a href="https://arxiv.org/abs/2603.08655" target="_blank">arXiv</a><br><b>🔻 痛点背景：</b>多文档问答落地场景复杂，解析与检索质量决定上限。<br><b>💡 核心解法：</b>构建覆盖近百年财政文档的大规模企业级评测集。<br><b>🚀 关键启发：</b>提升“文档解析质量”比单纯模型更关键。</p>
-        <div class="item-foot">
-          <div class="btns">
-            <a class="btn btn-primary" href="https://arxiv.org/abs/2603.08655" target="_blank">arXiv</a>
-          </div>
-        </div>
+        <p class="one">一句话总结：企业级多文档推理基准，文档解析是关键瓶颈。</p>
+        <p class="sub"><b>来源：</b> AlphaXiv · <a href="https://arxiv.org/abs/2603.08655" target="_blank">arXiv</a></p>
+      </div>
+
+      <div class="item">
+        <div class="title">Evaluating Financial Intelligence in LLMs: Benchmarking SuperInvesting AI</div>
+        <p class="one">一句话总结：金融场景下 LLM 推理能力系统评测。</p>
+        <p class="sub"><b>来源：</b> AlphaXiv · <a href="https://arxiv.org/abs/2603.08704" target="_blank">arXiv</a></p>
       </div>
     </div>
 
     <div class="section" id="sec-news">
-      <h3>科技新闻（公开媒体）</h3>
+      <h3>科技新闻（X + 媒体）</h3>
+      <div class="item">
+        <div class="title">X 热门：Grok 模型在 OpenRouter 排名与成本对比引发讨论</div>
+        <p class="one">（X 热度话题，围绕模型性能与成本）</p>
+        <p class="sub"><b>来源：</b> <a href="https://x.com/MarioNawfal/status/2030155323235860867" target="_blank">X 链接</a></p>
+      </div>
       <div class="item">
         <div class="title">Thinking Machines Lab 与 Nvidia 达成大规模算力合作</div>
-        <p class="one">OpenAI 前成员创立的研究实验室宣布与 Nvidia 战略合作，计划部署 Vera Rubin 系统。</p>
+        <p class="one">OpenAI 前成员创立的研究实验室宣布与 Nvidia 战略合作。</p>
         <p class="sub"><b>来源：</b> <a href="https://techcrunch.com/2026/03/10/thinking-machines-lab-inks-massive-compute-deal-with-nvidia/" target="_blank">TechCrunch</a></p>
       </div>
       <div class="item">
@@ -447,15 +449,10 @@
         <p class="one">面向机器人与边缘 AI，集成 Dragonwing 处理器与专用 MCU。</p>
         <p class="sub"><b>来源：</b> <a href="https://www.engadget.com/ai/qualcomms-new-arduino-ventuno-q-is-an-ai-focused-computer-designed-for-robotics-113047697.html" target="_blank">Engadget</a></p>
       </div>
-      <div class="item">
-        <div class="title">Nvidia‑Groq 交易外溢效应，AI 芯片创业生态被激活</div>
-        <p class="one">行业对低时延推理芯片的投资意愿被显著拉升。</p>
-        <p class="sub"><b>来源：</b> <a href="https://www.eetimes.com/fallout-from-nvidia-groq-deal-validates-ai-chip-startup-landscape/" target="_blank">EE Times</a></p>
-      </div>
     </div>
 
     <div class="foot">
-      生成：AI 自动化检索 · 版本：v0.3 · 日期口径：北京时间
+      生成：AI 自动化检索 · 版本：v0.4 · 日期口径：北京时间
     </div>
   </div>
 </body>
