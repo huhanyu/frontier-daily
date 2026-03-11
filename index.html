@@ -314,36 +314,36 @@
 </head>
 <body>
   <div class="wrap">
-    <!-- 沉浸式顶部 -->
     <div class="hero">
-      <h1>前沿优化早报 · 昨日（2026-03-09）</h1>
+      <h1>前沿科技日报 · 2026-03-10</h1>
       <div class="meta">
-        <span class="pill">主线：数据驱动进化计算 / 单目标 / BO黑箱 / RL / LLM×进化</span>
-        <span class="pill">证据：含 arXiv + X 引用链接</span>
-        <span class="pill">推送：每日 08:30（前一日）</span>
+        <span class="pill">北京时间 · 2026-03-10</span>
+        <span class="pill">主题：进化/自演化 · 强化学习 · 大模型</span>
+        <span class="pill">来源：AlphaXiv + 科技新闻</span>
       </div>
+
       <div class="kpis">
-        <div class="kpi"><div class="n">12</div><div class="l">本期条目（样例版）</div></div>
-        <div class="kpi"><div class="n">5</div><div class="l">涵盖栏目</div></div>
-        <div class="kpi"><div class="n">Top 3</div><div class="l">必看推荐</div></div>
+        <div class="kpi"><div class="n">22</div><div class="l">当天相关论文</div></div>
+        <div class="kpi"><div class="n">6</div><div class="l">精选解读</div></div>
+        <div class="kpi"><div class="n">3</div><div class="l">科技新闻</div></div>
       </div>
-      <div class="hero-note">注：这是全新升级的“Modern Editorial”护眼样式。确认风格后将把每栏扩到 3 条（共 15 条）并做更深的 3–5 句总结。</div>
+
+      <div class="hero-note">聚焦“进化/自演化、RL、LLM/Agent”。论文来自 AlphaXiv，新闻来自公开科技媒体。</div>
     </div>
 
-    <!-- 导航与高亮区 -->
     <div class="grid">
       <div class="card">
-        <h2>Top 3 必看</h2>
+        <h2>今日精选</h2>
         <div class="chips">
-          <span class="chip">MOEA · chance constraints</span>
-          <span class="chip">Agentic RL（综述）</span>
-          <span class="chip">LLM×进化（科学发现）</span>
+          <span class="chip">进化/自演化</span>
+          <span class="chip">强化学习</span>
+          <span class="chip">LLM / Agent</span>
         </div>
-        <p class="desc">按你的“优化主线”挑的 3 条：一个进化优化硬题、一个 RL×LLM 的框架性综述、一个 LLM×进化的代表性方向。</p>
+        <p class="desc">按你关注方向挑 6 条：2 条 RL×LLM 核心、2 条机器人/世界模型、1 条企业级 LLM 基准、1 条自演化 Agent。</p>
         <div class="btns">
-          <a class="btn btn-primary" href="https://arxiv.org/abs/2603.08209" target="_blank">arXiv 2603.08209</a>
-          <a class="btn" href="https://x.com/TAL/status/2031255756607979932" target="_blank">X 引用 (TAL)</a>
-          <a class="btn" href="https://arxiv.org/abs/2509.02547" target="_blank">arXiv 2509.02547</a>
+          <a class="btn btn-primary" href="https://arxiv.org/abs/2603.08561" target="_blank">RetroAgent</a>
+          <a class="btn" href="https://arxiv.org/abs/2603.08660" target="_blank">Unsupervised RLVR</a>
+          <a class="btn" href="https://arxiv.org/abs/2603.08706" target="_blank">Agentic Critical Training</a>
         </div>
       </div>
 
@@ -351,57 +351,25 @@
         <h2>快速索引</h2>
         <p class="desc">每条结构清晰分离：<b>问题 → 方法 → 关键点</b>，支持按目录直接跳转阅读。</p>
         <div class="btns">
-          <a class="btn" href="#sec-ec">进化计算</a>
-          <a class="btn" href="#sec-so">单目标</a>
-          <a class="btn" href="#sec-bo">贝叶斯优化</a>
+          <a class="btn" href="#sec-evo">进化/自演化</a>
           <a class="btn" href="#sec-rl">强化学习</a>
-          <a class="btn" href="#sec-llmec">LLM × 进化</a>
+          <a class="btn" href="#sec-llm">大模型 / Agent</a>
+          <a class="btn" href="#sec-news">科技新闻</a>
         </div>
       </div>
     </div>
 
     <!-- 正文区域 -->
-    <div class="section" id="sec-ec">
-      <h3>数据驱动的进化计算 / 进化优化</h3>
+    <div class="section" id="sec-evo">
+      <h3>进化 / 自演化方向</h3>
       <div class="item">
-        <div class="title">Multi-Objective Evolutionary Optimization of Chance-Constrained Multiple-Choice Knapsack Problems…</div>
-        <p class="one">一句话总结：系统拆解了“白化优化器”（如 SOAP/Muon），证明了性能提升的关键不仅是“谱下降”，更重要的是“方差自适应”（类似 Adam 的机制）。</p>
-        <p class="sub"><b>来源：</b> <a href="https://twitter.com/andersonbcdefg/status/1984413225451209129" target="_blank">𝕏</a> · <a href="https://arxiv.org/abs/2510.25000" target="_blank">arXiv</a><br><b>🔻 痛点背景：</b>近期涌现了一批声称超越 Adam 的矩阵白化优化器（Shampoo/Muon等），但它们到底为什么快？单纯是因为做了完美的“谱归一化”吗？之前缺乏严格的控制变量拆解。<br><b>💡 核心解法：</b>作者将“谱变换”和“下降策略”解耦并进行对照实验。结果发现，使用方差自适应（Variance-adapted）的版本（如 SOAP 或 AdaMuon）始终优于单纯的符号下降版本（如原始 Muon）。<br><b>🚀 关键启发：</b>白化优化器其实扮演了两个角色。我们不需要执着于完美的谱下降，结合“谱变换”与“低秩方差估计”，就能在保持高性能的同时大幅降低显存开销。</p>
+        <div class="title">RetroAgent: From Solving to Evolving via Retrospective Dual Intrinsic Feedback</div>
+        <p class="one">一句话总结：用“回溯反思 + 双重内在奖励”让 LLM‑Agent 在长期任务中持续进化，而不是一次性解题。</p>
+        <p class="sub"><b>来源：</b> AlphaXiv · <a href="https://arxiv.org/abs/2603.08561" target="_blank">arXiv</a><br><b>🔻 痛点背景：</b>传统 RL 更像一次性“解题”，模型知识沉在参数里，难以持续自我改进。<br><b>💡 核心解法：</b>引入回溯自反思机制，生成“数值奖励 + 语言教训”双通道内在反馈，驱动持续探索与显式可检索经验。<br><b>🚀 关键启发：</b>把“自演化”作为 Agent 的一等能力，而非事后调参。</p>
         <div class="item-foot">
           <div class="btns">
-            <a class="btn" href="https://x.com/TAL/status/2031255756607979932" target="_blank">𝕏 引用探讨</a>
-            <a class="btn btn-primary" href="https://arxiv.org/abs/2603.08209" target="_blank">arXiv</a>
+            <a class="btn btn-primary" href="https://arxiv.org/abs/2603.08561" target="_blank">arXiv</a>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section" id="sec-so">
-      <h3>单目标优化 / 优化器主线</h3>
-      <div class="item">
-        <div class="title">What really matters in matrix-whitening optimizers (Shampoo/SOAP/PSGD/Muon)?</div>
-        <p class="one">一句话总结：将“带约束的贝叶斯优化（cBOT）”用于多机器人轨迹规划，用极少的采样次数解决复杂的时序逻辑与动力学避障问题。</p>
-        <p class="sub"><b>来源：</b> X：无 · <a href="https://arxiv.org/abs/2603.05767" target="_blank">arXiv</a><br><b>🔻 痛点背景：</b>多机器人路径规划既要满足复杂的信号时序逻辑（STL），又要符合物理动力学约束。精确算法算力吃不消，常规的采样算法（如 RRT）又需要海量样本才能找到优解。<br><b>💡 核心解法：</b>采用两阶段框架：单机层面，用高斯过程（GP）作为代理模型学习局部代价图和可行性约束，用更少的样本探索无碰路径；多机层面，将时序逻辑监控融入基于冲突的搜索算法（KCBS）中。<br><b>🚀 关键启发：</b>巧妙实现了“黑箱代理模型”在多机协同上的应用，以极低的评估成本兼顾了路径安全性与全局可扩展性。</p>
-        <div class="item-foot">
-          <div class="btns">
-            <a class="btn" href="https://twitter.com/andersonbcdefg/status/1984413225451209129" target="_blank">𝕏 引用探讨</a>
-            <a class="btn btn-primary" href="https://arxiv.org/abs/2510.25000" target="_blank">arXiv</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section" id="sec-bo">
-      <h3>元黑箱优化 / 贝叶斯优化（BO）</h3>
-      <div class="item">
-        <div class="title">Multi-Robot Trajectory Planning via Constrained Bayesian Optimization…</div>
-        <p class="one">一句话总结：从“LLM 单步微调”到“Agent 多步决策”，系统梳理了 LLM 在动态环境中执行 Agentic RL（智能体强化学习）的完整版图与算法分支。</p>
-        <p class="sub"><b>来源：</b> X：无 · <a href="https://arxiv.org/abs/2509.02547" target="_blank">arXiv</a><br><b>🔻 痛点背景：</b>大模型的 RL 正在发生范式转移——从单纯优化单轮文本输出（如传统的 RLHF/DPO），转向让 Agent 在存在未知信息的动态环境中执行多步目标导向的决策（POMDP）。<br><b>💡 核心解法：</b>论文将这种 Agentic RL 体系划分为规划、工具调用、记忆和自我改进等能力维度，并详细对比了 PPO / GRPO 等算法在多步复杂环境（如 Web、GUI、代码）中的适配方案与评测基准。<br><b>🚀 关键启发：</b>明确了未来系统进化的方向（从依赖静态数据集向环境驱动的自我进化过渡），并深刻指出了“奖励作弊（Reward Hacking）”等新涌现的安全挑战。</p>
-        <div class="item-foot">
-          <div class="btns">
-            <a class="btn btn-primary" href="https://arxiv.org/abs/2603.05767" target="_blank">arXiv</a>
-          </div>
-          <div class="small-note">（将会补齐对应 X status 链接）</div>
         </div>
       </div>
     </div>
@@ -409,35 +377,85 @@
     <div class="section" id="sec-rl">
       <h3>强化学习（RL）</h3>
       <div class="item">
-        <div class="title">The Landscape of Agentic Reinforcement Learning for LLMs: A Survey</div>
-        <p class="one">一句话总结：引入“双重持久化记忆”与“自演化机制”，解决现有 AI 科学家系统容易重复试错的缺陷，实现更高质量的端到端科研发现。</p>
-        <p class="sub"><b>来源：</b> X：无 · <a href="https://arxiv.org/abs/2603.08127" target="_blank">arXiv</a><br><b>🔻 痛点背景：</b>现有的“AI 科学家”系统（如 The AI Scientist）大多采用静态工作流，缺乏跨轮次的记忆能力。这导致 Agent 经常重复以前失败的实验，或在不可行的方向上死磕。<br><b>💡 核心解法：</b>构建了一个包含研究员、工程师和“演化管理器”的多智能体框架。系统会在运行中积累“Idea 记忆”和“实验记忆”，Agent 会在提假设和写代码时自动检索过去的成功经验与失败教训，实现策略的不断演化。<br><b>🚀 关键启发：</b>让 AI 科研系统真正具备了“吃一堑长一智”的能力，其提出 Idea 的创新性、可行性以及代码执行成功率均大幅优于现有基线。</p>
+        <div class="title">How Far Can Unsupervised RLVR Scale LLM Training?</div>
+        <p class="one">一句话总结：无监督“可验证奖励”能短期提升，但会出现“先升后塌”的极限；外部验证更可扩展。</p>
+        <p class="sub"><b>来源：</b> AlphaXiv · <a href="https://arxiv.org/abs/2603.08660" target="_blank">arXiv</a><br><b>🔻 痛点背景：</b>RLVR 试图摆脱标注依赖，但其可扩展性和长期收益未知。<br><b>💡 核心解法：</b>系统化分析 URLVR 轨迹，指出内生奖励只是“锐化已有知识”。<br><b>🚀 关键启发：</b>外部验证奖励（self‑verification 等）是更稳健的扩展路径。</p>
         <div class="item-foot">
           <div class="btns">
-            <a class="btn btn-primary" href="https://arxiv.org/abs/2509.02547" target="_blank">arXiv</a>
+            <a class="btn btn-primary" href="https://arxiv.org/abs/2603.08660" target="_blank">arXiv</a>
           </div>
-          <div class="small-note">（将继续补齐 LangChainJP 转发链接）</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="title">Agentic Critical Training</div>
+        <p class="one">一句话总结：让 LLM‑Agent 学会“批判性判断动作质量”，不再只是模仿反思文本。</p>
+        <p class="sub"><b>来源：</b> AlphaXiv · <a href="https://arxiv.org/abs/2603.08706" target="_blank">arXiv</a><br><b>🔻 痛点背景：</b>仅靠 imitation 学不到“为什么错”。<br><b>💡 核心解法：</b>用 RL 框架让模型对动作质量做真实对比学习。<br><b>🚀 关键启发：</b>把“批判能力”内生化，可显著提升任务成功率。</p>
+        <div class="item-foot">
+          <div class="btns">
+            <a class="btn btn-primary" href="https://arxiv.org/abs/2603.08706" target="_blank">arXiv</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="title">MetaWorld‑X: Hierarchical World Modeling via VLM‑Orchestrated Experts for Humanoid Loco‑Manipulation</div>
+        <p class="one">一句话总结：用 VLM 统筹“技能专家”，让人形机器人在行走+操作的复合任务中更稳定。</p>
+        <p class="sub"><b>来源：</b> AlphaXiv · <a href="https://arxiv.org/abs/2603.08572" target="_blank">arXiv</a><br><b>🔻 痛点背景：</b>单一策略学多技能容易互相干扰。<br><b>💡 核心解法：</b>层级世界模型 + 专家路由，组合技能执行。<br><b>🚀 关键启发：</b>多专家协作能显著提升复杂人形任务稳定性。</p>
+        <div class="item-foot">
+          <div class="btns">
+            <a class="btn btn-primary" href="https://arxiv.org/abs/2603.08572" target="_blank">arXiv</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="title">Interactive World Simulator for Robot Policy Training and Evaluation</div>
+        <p class="one">一句话总结：用“动作条件视频预测”构建高效世界模型，快速生成机器人训练数据。</p>
+        <p class="sub"><b>来源：</b> AlphaXiv · <a href="https://arxiv.org/abs/2603.08546" target="_blank">arXiv</a><br><b>🔻 痛点背景：</b>真实交互数据昂贵，仿真不够真实。<br><b>💡 核心解法：</b>高效长时预测 + 物理一致性视频生成。<br><b>🚀 关键启发：</b>低成本生成高质量专家演示数据，利于规模化训练。</p>
+        <div class="item-foot">
+          <div class="btns">
+            <a class="btn btn-primary" href="https://arxiv.org/abs/2603.08546" target="_blank">arXiv</a>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="section" id="sec-llmec">
-      <h3>LLM × 进化计算（结合方向）</h3>
+    <div class="section" id="sec-llm">
+      <h3>大模型 / Agent</h3>
       <div class="item">
-        <div class="title">EvoScientist: Towards Multi-Agent Evolving AI Scientists for End-to-End Scientific Discovery</div>
-        <p class="one">一句话：把<b>多智能体 + 演化机制 + 长程记忆</b>组合起来做端到端科研发现，是 LLM×进化/搜索 的代表路线之一。</p>
-        <p class="sub"><b>大概思路：</b> 让一群“AI scientist agents”在提出假设、设计实验、分析结果的循环里，通过演化式的选择/变异逐步改进策略（更偏“自演化 agent 系统”的范式）。</p>
+        <div class="title">OfficeQA Pro: An Enterprise Benchmark for End‑to‑End Grounded Reasoning</div>
+        <p class="one">一句话总结：企业级“多文档推理基准”，揭示模型在真实 PDF/表格解析上仍是瓶颈。</p>
+        <p class="sub"><b>来源：</b> AlphaXiv · <a href="https://arxiv.org/abs/2603.08655" target="_blank">arXiv</a><br><b>🔻 痛点背景：</b>多文档问答落地场景复杂，解析与检索质量决定上限。<br><b>💡 核心解法：</b>构建覆盖近百年财政文档的大规模企业级评测集。<br><b>🚀 关键启发：</b>提升“文档解析质量”比单纯模型更关键。</p>
         <div class="item-foot">
           <div class="btns">
-            <a class="btn btn-primary" href="https://arxiv.org/abs/2603.08127" target="_blank">arXiv</a>
+            <a class="btn btn-primary" href="https://arxiv.org/abs/2603.08655" target="_blank">arXiv</a>
           </div>
-          <div class="small-note">（若无特定X链接，可替换为同方向热贴）</div>
         </div>
+      </div>
+    </div>
+
+    <div class="section" id="sec-news">
+      <h3>科技新闻（公开媒体）</h3>
+      <div class="item">
+        <div class="title">Thinking Machines Lab 与 Nvidia 达成大规模算力合作</div>
+        <p class="one">OpenAI 前成员创立的研究实验室宣布与 Nvidia 战略合作，计划部署 Vera Rubin 系统。</p>
+        <p class="sub"><b>来源：</b> <a href="https://techcrunch.com/2026/03/10/thinking-machines-lab-inks-massive-compute-deal-with-nvidia/" target="_blank">TechCrunch</a></p>
+      </div>
+      <div class="item">
+        <div class="title">Qualcomm 推出 AI 机器人用单板计算机 Arduino Ventuno Q</div>
+        <p class="one">面向机器人与边缘 AI，集成 Dragonwing 处理器与专用 MCU。</p>
+        <p class="sub"><b>来源：</b> <a href="https://www.engadget.com/ai/qualcomms-new-arduino-ventuno-q-is-an-ai-focused-computer-designed-for-robotics-113047697.html" target="_blank">Engadget</a></p>
+      </div>
+      <div class="item">
+        <div class="title">Nvidia‑Groq 交易外溢效应，AI 芯片创业生态被激活</div>
+        <p class="one">行业对低时延推理芯片的投资意愿被显著拉升。</p>
+        <p class="sub"><b>来源：</b> <a href="https://www.eetimes.com/fallout-from-nvidia-groq-deal-validates-ai-chip-startup-landscape/" target="_blank">EE Times</a></p>
       </div>
     </div>
 
     <div class="foot">
-      生成：AI 自动化检索 · 版本：v0.2 (Modern Editorial) · 自动推送已准备就绪
+      生成：AI 自动化检索 · 版本：v0.3 · 日期口径：北京时间
     </div>
   </div>
 </body>
