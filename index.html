@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>前沿优化早报 · 2026-03-29</title>
+  <title>前沿优化早报 · 2026-03-30</title>
   <style>
     :root {
       --bg-body: #F8FAFC;
@@ -112,108 +112,126 @@
 <body>
   <div class="wrap">
     <div class="hero">
-      <h1>前沿优化早报 · 2026-03-29</h1>
+      <h1>前沿优化早报 · 2026-03-30</h1>
       <div class="meta">
-        <span class="pill">主线：自演化 Agent / 自改进 LLM / RL × 进化</span>
+        <span class="pill">主线：自演化 Agent / 多智能体系统 / RL 驱动记忆</span>
         <span class="pill">来源：arXiv 2603.xxxxx 系列</span>
         <span class="pill">自动发布：每日 UTC+8 08:30</span>
       </div>
       <div class="kpis">
-        <div class="kpi"><div class="n">5</div><div class="l">本期论文</div></div>
+        <div class="kpi"><div class="n">7</div><div class="l">本期论文</div></div>
         <div class="kpi"><div class="n">3</div><div class="l">主题板块</div></div>
         <div class="kpi"><div class="n">Top 3</div><div class="l">必看推荐</div></div>
       </div>
-      <div class="hero-note">今日关键词：<b>策略级自修复</b>、<b>可迁移经验记忆</b>、<b>Agent 驱动进化搜索</b>。Agent 不止改 prompt，开始改自己的策略代码和经验库。</div>
+      <div class="hero-note">今日关键词：<b>形式化自演化</b>、<b>可学习动态记忆</b>、<b>自组织多 Agent 团队</b>。Agent 开始追求可验证的自我改进，记忆从静态缓存进化为可学习的动态系统。</div>
     </div>
 
     <div class="grid">
       <div class="card">
         <h2>Top 3 必看</h2>
         <div class="chips">
-          <span class="chip">Polaris · 策略修复 Agent</span>
-          <span class="chip">MemAPO · 自演化 Prompt 记忆</span>
-          <span class="chip">AVO · Agent 进化算子</span>
+          <span class="chip">SEVerA · 形式化自演化综合</span>
+          <span class="chip">AtomMem · RL 驱动原子记忆</span>
+          <span class="chip">TheBotCompany · 自组织 Agent 团队</span>
         </div>
-        <p class="desc">三条路线分别代表了 Agent 自我改进的"策略层"、"记忆层"和"搜索层"，覆盖从代码修补到内核优化的完整光谱。</p>
+        <p class="desc">三条路线分别代表了自演化 Agent 的"可验证性"、"可学习记忆"和"团队自组织"三个关键维度——从证明正确性到工程落地的完整闭环。</p>
         <div class="btns">
-          <a class="btn btn-primary" href="https://arxiv.org/abs/2603.23129" target="_blank">Polaris</a>
-          <a class="btn" href="https://arxiv.org/abs/2603.21520" target="_blank">MemAPO</a>
-          <a class="btn" href="https://arxiv.org/abs/2603.24517" target="_blank">AVO</a>
+          <a class="btn btn-primary" href="https://arxiv.org/abs/2603.25111" target="_blank">SEVerA</a>
+          <a class="btn" href="https://arxiv.org/abs/2601.08323" target="_blank">AtomMem</a>
+          <a class="btn" href="https://arxiv.org/abs/2603.25928" target="_blank">TheBotCompany</a>
         </div>
       </div>
       <div class="card">
         <h2>快速索引</h2>
-        <p class="desc">本期按主题分三栏：<b>策略级自修复</b>（1 篇）、<b>可迁移记忆系统</b>（2 篇）、<b>进化搜索与 RL 加速</b>（2 篇）。</p>
+        <p class="desc">本期按主题分三栏：<b>形式化自演化</b>（1 篇）、<b>Agent 记忆系统</b>（2 篇）、<b>多 Agent 协作与决策</b>（4 篇）。</p>
         <div class="btns">
-          <a class="btn" href="#sec-policy">策略修复</a>
+          <a class="btn" href="#sec-formal">形式化自演化</a>
           <a class="btn" href="#sec-memory">记忆系统</a>
-          <a class="btn" href="#sec-evo">进化搜索</a>
+          <a class="btn" href="#sec-multiagent">多 Agent 协作</a>
         </div>
       </div>
     </div>
 
-    <!-- 策略级自修复 -->
-    <div class="section" id="sec-policy">
-      <h3>策略级自修复</h3>
+    <!-- 形式化自演化 -->
+    <div class="section" id="sec-formal">
+      <h3>形式化自演化</h3>
 
       <div class="item">
-        <div class="title">Polaris: A Gödel Agent Framework for Small Language Models through Experience-Abstracted Policy Repair</div>
-        <p class="one"><b>一句话：</b>7B 模型实现递归自我改进——把失败经验抽象成策略补丁，直接修补 Agent 策略代码，而非调参或改 prompt。</p>
-        <p class="sub"><b>核心思路：</b>Gödel Agent 的核心是"自我检查 → 发现错误 → 修补策略"的循环。Polaris 将这个循环落地到 7B 小模型：失败轨迹经"分析 → 策略形成 → 经验抽象 → 代码修补"四步，生成可审计的最小策略补丁。补丁持久化在策略文件中，可跨实例复用。在 MGSM、DROP、GPQA、LitBench 上均获一致提升。<br><b>启发：</b>Agent 自改进从"改 prompt / 调参数"升级到"改策略代码"——这更接近人类程序员的 bugfix 逻辑，且补丁可审查。</p>
+        <div class="title">SEVerA: Verified Synthesis of Self-Evolving Agents</div>
+        <p class="one"><b>一句话：</b>首次为自演化 Agent 提供形式化验证——Agent 的自我修改过程经过合成检验，保证演化后的策略仍然满足安全规约。</p>
+        <p class="sub"><b>核心思路：</b>自演化 Agent 最大的担忧是"演化后是否还安全"。SEVerA 提出 verified synthesis 框架：Agent 的每次自我修改都经过形式化检查（φ_A ∧ check），确保演化后的行为仍在预设的正确性边界内。通过条件化验证（条件 27-28 的推导链），可以对多步演化链进行组合验证，而非只检查单步。<br><b>启发：</b>自演化 Agent 从"能改"走向"改了还能证明对"——这是把形式化方法引入 Agent 演化的开创性工作，对安全关键场景意义重大。</p>
         <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2603.23129" target="_blank">arXiv 2603.23129</a></div>
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2603.25111" target="_blank">arXiv 2603.25111</a></div>
         </div>
       </div>
     </div>
 
-    <!-- 可迁移记忆系统 -->
+    <!-- Agent 记忆系统 -->
     <div class="section" id="sec-memory">
-      <h3>可迁移记忆系统</h3>
+      <h3>Agent 记忆系统</h3>
 
       <div class="item">
-        <div class="title">MemAPO: Generalizable Self-Evolving Memory for Automatic Prompt Optimization</div>
-        <p class="one"><b>一句话：</b>用双记忆机制（策略模板 + 错误模式）替代逐任务 prompt 搜索，让 prompt 优化变成可累积的经验积累。</p>
-        <p class="sub"><b>核心思路：</b>传统 prompt 优化每次从头搜。MemAPO 维护双层记忆：正向记忆提炼成功推理轨迹为可复用策略模板，负向记忆组织常见错误为结构化失败模式。新任务到来时同时检索两种记忆，组合生成避免已知错误、促进有效推理的 prompt。通过迭代自反思持续更新记忆库。<br><b>启发：</b>把"每次搜索 prompt"变成"积累可迁移的 prompt 经验"——从 O(n) 变成 O(1) 检索 + O(1) 组装，成本大幅下降。</p>
+        <div class="title">AtomMem: Learnable Dynamic Agentic Memory with Atomic Operations</div>
+        <p class="one"><b>一句话：</b>把 Agent 记忆拆成原子操作（增删改查），用 RL 让 Agent 自己学会何时、如何管理记忆——记忆从被动存储变成主动技能。</p>
+        <p class="sub"><b>核心思路：</b>现有 Agent 记忆大多是固定规则管理（FIFO、LLM 总结）。AtomMem 定义了一组原子操作（atomic operations），Agent 通过 RL 训练在这些操作上学习策略：什么时候写入、什么时候遗忘、什么时候合并。关键区别在于"可学习"——Agent 不是按硬编码规则管理记忆，而是从经验中习得最优记忆管理策略。<br><b>启发：</b>把记忆管理从"规则"升级为"技能"。类比人类：高手和新手的区别不只是知识量，更在于知道该记住什么、忘掉什么。</p>
         <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2603.21520" target="_blank">arXiv 2603.21520</a></div>
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2601.08323" target="_blank">arXiv 2601.08323</a></div>
         </div>
       </div>
 
       <div class="item">
-        <div class="title">MemCollab: Cross-Agent Memory Collaboration via Contrastive Trajectory Distillation</div>
-        <p class="one"><b>一句话：</b>不同 LLM Agent 之间共享记忆——通过对比推理轨迹提炼"任务级不变量"，剥离 Agent 特有偏差，构建跨模型通用记忆。</p>
-        <p class="sub"><b>核心思路：</b>现有 Agent 记忆与特定模型绑定，跨模型迁移会退化。MemCollab 让不同 Agent 对同一任务生成推理轨迹，通过对比学习提取共有的任务约束（不变量），过滤 Agent 特有偏差。加上任务感知检索机制，确保推理时只激活相关记忆。在数学推理和代码生成上均提升跨模型效果。<br><b>启发：</b>Agent 记忆从"个人笔记"升级为"公共知识库"——多 Agent 协作场景的核心基础设施。</p>
+        <div class="title">Experiential Reflective Learning for Self-Improving LLM Agents</div>
+        <p class="one"><b>一句话：</b>Agent 从过往任务中提炼启发式规则（heuristics），新任务时检索相关启发式注入上下文——用"经验法则"而非重新学习来提速。</p>
+        <p class="sub"><b>核心思路：</b>自改进 Agent 一个关键问题是"学了就忘"——每次新任务从头来。ERL 让 Agent 在完成任务后反思提炼可复用的启发式规则（heuristic），存入经验库。新任务到来时，基于任务特征检索最相关的启发式，注入 agent 上下文指导执行。关键发现：heuristic retrieval 的质量直接影响最终效果。<br><b>启发：</b>与 AtomMem 互补：AtomMem 管"怎么存"，ERL 管"怎么提炼和复用"。两者结合可能形成完整的 Agent 经验学习闭环。</p>
         <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2603.23234" target="_blank">arXiv 2603.23234</a></div>
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2603.24639" target="_blank">arXiv 2603.24639</a></div>
         </div>
       </div>
     </div>
 
-    <!-- 进化搜索与 RL 加速 -->
-    <div class="section" id="sec-evo">
-      <h3>进化搜索与 RL 加速</h3>
+    <!-- 多 Agent 协作与决策 -->
+    <div class="section" id="sec-multiagent">
+      <h3>多 Agent 协作与决策</h3>
 
       <div class="item">
-        <div class="title">AVO: Agentic Variation Operators for Autonomous Evolutionary Search</div>
-        <p class="one"><b>一句话：</b>用 Agent 替代经典进化算法的变异/交叉算子——Agent 自主查阅谱系、知识库和执行反馈，在 NVIDIA B200 上进化出超越 cuDNN 的 Attention 内核。</p>
-        <p class="sub"><b>核心思路：</b>传统进化搜索的变异算子是固定的（随机扰动、交叉）。AVO 把变异算子升级为 Agent：自主分析当前解的谱系，查阅领域知识库，执行代码并根据反馈提出、修复、批评、验证编辑。7 天连续进化 multi-head attention，发现的内核比 cuDNN 快 3.5%、比 FlashAttention-4 快 10.5%。GQA 仅需 30 分钟微调即获得 7.0% 提升。<br><b>启发：</b>Agent 从"候选解生成器"升级为"进化算子本身"——这打开了一扇门：任何需要探索性优化的工程问题都可以用 Agent 驱动进化。</p>
+        <div class="title">TheBotCompany: Self-Organizing Multi-Agent Systems for Continuous Software Development</div>
+        <p class="one"><b>一句话：</b>Agent 团队自组织开发软件——三阶段状态机（策略→执行→验证）驱动里程碑，Agent 自主分工、协调、验错，实现真正的持续开发。</p>
+        <p class="sub"><b>核心思路：</b>多 Agent 做软件开发常见的问题是"Agent 越多越乱"。TheBotCompany 引入三阶段状态机和自组织 agent 团队：管理 Agent 负责任务拆解和分配，开发 Agent 执行编码，验证 Agent 检查产出。关键创新在于 Agent 之间自主协调（而非中心调度），通过里程碑驱动保证阶段性交付。<br><b>启发：</b>多 Agent 软件开发从"并行多 Agent"走向"有组织的自管理团队"——状态机提供了结构，自组织提供了弹性。</p>
         <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2603.24517" target="_blank">arXiv 2603.24517</a></div>
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2603.25928" target="_blank">arXiv 2603.25928</a></div>
         </div>
       </div>
 
       <div class="item">
-        <div class="title">SortedRL: Accelerating RL Training for LLMs through Online Length-Aware Scheduling</div>
-        <p class="one"><b>一句话：</b>按输出长度排序 rollout 样本，用"长度感知调度"把 LLM 的 RL 训练泡沫比减少 50%+，同数据量性能提升 3.9%~18.4%。</p>
-        <p class="sub"><b>核心思路：</b>RL 训练的 rollout 阶段可占总时间 70%。SortedRL 按输出长度重排样本，短样本优先形成组以尽早触发策略更新，同时支持大 rollout batch、灵活 update batch 和近在线课程学习。引入缓存机制控制 off-policy 程度。在 LLaMA-3.1-8B 和 Qwen-2.5-32B 上均显著加速。<br><b>启发：</b>看似简单"排序"，实则是将 curriculum learning 嵌入 rollout 调度。工程优化的典型——算法层面没有大改，系统层面大幅提速。</p>
+        <div class="title">Self-Evolving Multi-Agent Framework for Efficient Decision Making</div>
+        <p class="one"><b>一句话：</b>实时决策场景下，用拓扑降维+自演化从高维特征中提炼决策关键信息——在保持决策质量的同时大幅降低推理成本。</p>
+        <p class="sub"><b>核心思路：</b>LLM 做实时决策面临高维输入+低延迟的矛盾。本工作提出自演化多 Agent 框架：通过结构化拓扑降维（topological dimensionality reduction）提炼关键特征，Agent 根据决策结果反馈持续演化特征选择策略。核心在于"特征精炼 + 自适应降维"双管齐下。<br><b>启发：</b>自演化不只是改策略/改 prompt，也可以演化"看什么"——特征选择本身成为一个可学习的 Agent 行为。</p>
         <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2603.23414" target="_blank">arXiv 2603.23414</a></div>
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2603.23875" target="_blank">arXiv 2603.23875</a></div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="title">MARCH: Multi-Agent Reinforced Self-Check for LLM Hallucination</div>
+        <p class="one"><b>一句话：</b>用多 Agent + RL 自动检测幻觉——Solver 生成回答，Checker 用强化学习训练出检测策略，两者对抗式迭代提升可靠性。</p>
+        <p class="sub"><b>核心思路：</b>LLM 幻觉检测常用固定 prompt 做 self-check，效果不稳定。MARCH 把检测变成 RL 问题：Checker Agent 通过与 Solver 对抗，在 RL 训练中学习何时、如何质疑生成内容。Solver 的 policy π_θ 接受 Checker 的反馈自我改进。两 Agent 形成对抗式提升循环。<br><b>启发：</b>Self-check 从"prompt trick"升级为"RL-trained adversarial policy"——可训练的幻觉检测器比固定规则更鲁棒。</p>
+        <div class="item-foot">
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2603.24579" target="_blank">arXiv 2603.24579</a></div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="title">Self-Improving Analog Circuit Design Automation with LLM Agents</div>
+        <p class="one"><b>一句话：</b>LLM Agent 做模拟电路设计——突破单模型循环的局限，用多 Agent 协作解决领域知识不足和上下文衰减问题。</p>
+        <p class="sub"><b>核心思路：</b>现有 LLM 电路设计依赖"生成→诊断→修正"的单模型循环，存在两个问题：缺乏领域深度洞察、上下文随迭代衰减。本工作引入多 Agent 分工：专门负责电路分析、方案生成、参数优化的 Agent 协作，通过领域知识注入弥补 LLM 的专业盲区。<br><b>启发：</b>Agent 自改进不只是泛化的，也可以深入垂直领域——模拟电路设计是极其专业的场景，多 Agent 协作恰好弥补单一 LLM 的知识边界。</p>
+        <div class="item-foot">
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2603.23910" target="_blank">arXiv 2603.23910</a></div>
         </div>
       </div>
     </div>
 
     <div class="foot">
-      生成：AI 自动化检索 · 自演化 Agent 专题 · 2026-03-29
+      生成：AI 自动化检索 · 自演化 Agent 专题 · 2026-03-30
     </div>
   </div>
 </body>
