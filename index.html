@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>前沿优化早报 · 2026-04-02</title>
+  <title>前沿优化早报 · 2026-04-03</title>
   <style>
     :root {
       --bg-body: #F8FAFC;
@@ -113,90 +113,73 @@
 <body>
   <div class="wrap">
     <div class="hero">
-      <h1>前沿优化早报 · 2026-04-02</h1>
+      <h1>前沿优化早报 · 2026-04-03</h1>
       <div class="meta">
-        <span class="pill">主线：自组织 Multi-Agent / 自进化对话 / 多 Agent 科研</span>
-        <span class="pill">来源：arXiv 2603.xxxxx / 2602.xxxxx</span>
+        <span class="pill">主线：LLM Agent 记忆架构 / 极简推理策略</span>
+        <span class="pill">来源：arXiv 2604.xxxxx / 2603.xxxxx</span>
         <span class="pill">自动发布：每日 UTC+8 08:30</span>
       </div>
       <div class="kpis">
-        <div class="kpi"><div class="n">3</div><div class="l">本期论文</div></div>
-        <div class="kpi"><div class="n">3</div><div class="l">主题板块</div></div>
+        <div class="kpi"><div class="n">2</div><div class="l">本期论文</div></div>
+        <div class="kpi"><div class="n">2</div><div class="l">主题板块</div></div>
         <div class="kpi"><div class="n">全新</div><div class="l">无重复</div></div>
       </div>
-      <div class="hero-note">今日关键词：<b>涌现自组织</b>、<b>自进化服务对话</b>、<b>多 Agent 科研工作流进化</b>。三篇都在探索同一个问题——Agent 系统能不能自己长出更好的组织结构和工作方式，而不是靠人类手把手设计。</div>
+      <div class="hero-note">今日关键词：<b>多层记忆架构</b>、<b>Less is More 推理</b>。两篇论文从不同角度挑战"更多=更好"的假设——多层记忆探索如何在长上下文中更好地保持注意力，Less is More 系列则证明精简的 prompt 和推理策略可能优于复杂方案。</div>
     </div>
 
     <div class="grid">
       <div class="card">
-        <h2>今日三篇</h2>
+        <h2>今日两篇</h2>
         <div class="chips">
-          <span class="chip">自组织 · 涌现角色</span>
-          <span class="chip">SEAD · 对话自进化</span>
-          <span class="chip">Mimosa · 多 Agent 科研</span>
+          <span class="chip">多层记忆 · LOCOMO</span>
+          <span class="chip">Less is More · 推理压缩</span>
         </div>
-        <p class="desc">三个方向都在追问"谁来设计 Agent 系统的结构"。自组织论文证明给够协议和能力，Agent 自己能涌现角色分工；SEAD 把自进化带入服务对话场景；Mimosa 让多 Agent 工作流在科研任务中自动迭代优化。</p>
+        <p class="desc">两个方向都在反思"堆料"思路。多层记忆论文在三个长上下文 benchmark 上验证了分层记忆设计的效果；Less is More 系列则持续证明简化的推理策略可以超越复杂 prompt 工程。</p>
         <div class="btns">
-          <a class="btn btn-primary" href="https://arxiv.org/abs/2603.28990" target="_blank">自组织</a>
-          <a class="btn" href="https://arxiv.org/abs/2602.03548" target="_blank">SEAD</a>
-          <a class="btn" href="https://arxiv.org/abs/2603.28986" target="_blank">Mimosa</a>
+          <a class="btn btn-primary" href="https://arxiv.org/abs/2603.29194" target="_blank">多层记忆</a>
+          <a class="btn" href="https://arxiv.org/abs/2604.00824" target="_blank">Less is More</a>
         </div>
       </div>
       <div class="card">
         <h2>本期结构</h2>
-        <p class="desc">三个板块：<b>涌现自组织</b>（大规模实验验证 Agent 自组织优于人工设计）、<b>服务对话自进化</b>（无需大量人工标注的对话策略学习）、<b>多 Agent 科研进化</b>（工作流自动合成与迭代）。</p>
+        <p class="desc">两个板块：<b>多层记忆架构</b>（长上下文下的分层记忆保持，突破 46.85% 成功率）、<b>极简推理策略</b>（Less is More 在 Agent、Reasoning、Coding 任务上的系统性验证）。</p>
         <div class="btns">
-          <a class="btn" href="#sec-selforg">涌现自组织</a>
-          <a class="btn" href="#sec-sead">对话自进化</a>
-          <a class="btn" href="#sec-mimosa">多 Agent 科研</a>
+          <a class="btn" href="#sec-memory">多层记忆</a>
+          <a class="btn" href="#sec-less">极简推理</a>
         </div>
       </div>
     </div>
 
-    <!-- 涌现自组织 -->
-    <div class="section" id="sec-selforg">
-      <h3>涌现自组织</h3>
+    <!-- 多层记忆架构 -->
+    <div class="section" id="sec-memory">
+      <h3>多层记忆架构</h3>
 
       <div class="item">
-        <div class="title">Drop the Hierarchy and Roles: How Self-Organizing LLM Agents Outperform Designed Structures</div>
-        <p class="one"><b>一句话：</b>25,000 个任务的实验显示，给 LLM Agent 一个协议（而非预设角色），它们会自发涌现角色分工和浅层层级——自组织比中心化协调高出 14%，8 个 Agent 能产生 5,006 个独特角色。</p>
-        <p class="sub"><b>核心思路：</b>跨越 8 个模型、4–256 个 Agent、8 种协调协议的大规模实验。关键发现：(1) Agent 在极简结构（固定顺序）下就能自发发明专业角色、主动放弃不擅长的任务、形成层级，无需任何预设。(2) Sequential 混合协议比集中式协调高 14%（p<0.001），协议间效果差距达 44%（Cohen's d=1.86）。(3) 自组织能力随模型能力缩放——强模型能自组织，弱模型仍需刚性结构。(4) 系统在 256 个 Agent 时质量无衰减（p=0.61），开源模型达到闭源 95% 的质量但成本低 24 倍。<br><b>启发：</b>Multi-Agent 系统的设计范式可能需要翻转——不是"人类设计角色让 Agent 执行"，而是"给 Agent 协议和能力，让角色自己涌现"。随着模型变强，后者的收益会越来越大。</p>
+        <div class="title">Multi-Layered Memory Architectures for LLM Agents</div>
+        <p class="one"><b>一句话：</b>提出 LOCOMO 三层记忆架构——在长上下文任务中分别维护情景、语义和工作记忆，在 LOCOMO、LOCCO、LoCoMo 三个 benchmark 上达到 46.85% 成功率，显著超越基线。</p>
+        <p class="sub"><b>核心思路：</b>长上下文任务中，LLM 容易"遗忘"早期关键信息。传统方法要么增加 context window，要么用 RAG 但效果有限。LOCOMO 的创新在于引入三层记忆：(1) Episodic Memory 记录最近交互，(2) Semantic Memory 存储任务相关的长期知识，(3) Working Memory 维护当前任务状态。关键设计：三层之间通过注意力机制动态交互，让模型在不同任务阶段调用不同层次的记忆。实验在三个专门设计的长上下文 benchmark（LOCOMO、LOCCO、LoCoMo）上验证了分层设计的有效性，达到 46.85% 成功率。<br><b>启发：</b>这篇工作提示我们，长上下文模型的"大海捞针"能力可能不等于有效利用——需要显式的记忆管理机制来指导模型何时检索什么层次的信息。</p>
         <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2603.28990" target="_blank">arXiv 2603.28990</a></div>
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2603.29194" target="_blank">arXiv 2603.29194</a></div>
         </div>
       </div>
     </div>
 
-    <!-- 服务对话自进化 -->
-    <div class="section" id="sec-sead">
-      <h3>服务对话自进化</h3>
+    <!-- 极简推理 -->
+    <div class="section" id="sec-less">
+      <h3>极简推理</h3>
 
       <div class="item">
-        <div class="title">SEAD: Self-Evolving Agent for Multi-Turn Service Dialogue</div>
-        <p class="one"><b>一句话：</b>用自进化替代大规模人工标注——SEAD 将用户建模拆成 Profile Controller（控制课程多样性）和 User Role-play Model（真实角色扮演），让对话 Agent 在模拟中自我迭代，任务完成率提升 17.6%，对话效率提升 11.1%。</p>
-        <p class="sub"><b>核心思路：</b>服务对话的难点在于高质量标注数据稀缺，且模拟用户行为容易变成不公平对抗——模拟器可以任意控制结果。SEAD 的解法：把用户建模拆成两部分——Profile Controller 生成多样的用户状态来管理训练课程，User Role-play Model 专注于逼真的角色扮演。这个设计保证环境提供自适应训练场景，而不是一个可以操控一切的对手。不需要大规模人工标注，Agent 在自博弈中持续进化策略。实验在任务完成率上超越开源和闭源基线 17.6%。<br><b>启发：</b>"自进化"不一定要在 RL 算法层面做文章。SEAD 的思路是在环境/用户模拟层面引入进化机制——通过控制训练课程的多样性来驱动策略提升，本质上是一种 curriculum learning + self-play 的融合。</p>
+        <div class="title">Yet Even Less Is Even Better For Agentic, Reasoning, and Coding Tasks</div>
+        <p class="one"><b>一句话：</b>Less is More 系列的最新进展——系统性验证在 Agent、Reasoning、Coding 任务上，极简 prompt 和推理策略优于复杂方案，在多个 benchmark 上达到 SOTA。</p>
+        <p class="sub"><b>核心思路：</b>这篇是 Less is More 系列的第三篇（继 Se-agent 和 EAgent 之后）。核心发现：复杂 prompt 带来的边际收益递减，有时甚至有害。研究者系统性地比较了：(1) 极简 system prompt vs 冗长指令，(2) 少样本 vs 零样本，(3) 单步推理 vs 多步分解。结论：在 Agent、Reasoning、Coding 三个领域，极简方案普遍优于复杂方案，特别是在开源模型上效果显著。消融实验揭示了关键因素：清晰的任务边界比丰富的示例更重要。<br><b>启发：</b>这波"减法"浪潮提示我们，prompt 工程的最佳实践可能不是"告诉模型更多"，而是"让模型自己推理更多"。随着模型能力提升，简约 prompt 的效果会越来越好。</p>
         <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2602.03548" target="_blank">arXiv 2602.03548</a></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 多 Agent 科研进化 -->
-    <div class="section" id="sec-mimosa">
-      <h3>多 Agent 科研进化</h3>
-
-      <div class="item">
-        <div class="title">Mimosa: Toward Evolving Multi-Agent Systems for Scientific Research</div>
-        <p class="one"><b>一句话：</b>让多 Agent 科研系统的工作流自动合成和迭代——Mimosa 通过 MCP 动态发现工具、meta-orchestrator 生成工作流拓扑、LLM judge 评分驱动迭代，在 ScienceAgentBench 上达到 43.1% 成功率，超越单 Agent 和静态多 Agent 方案。</p>
-        <p class="sub"><b>核心思路：</b>现有 ASR 系统受限于固定工作流和工具集，无法适应演化中的任务。Mimosa 的架构：(1) 通过 MCP（Model Context Protocol）动态发现可用工具；(2) meta-orchestrator 自动生成工作流拓扑；(3) 代码生成 Agent 执行子任务并调用科学软件；(4) LLM judge 对执行评分，反馈驱动工作流迭代优化。在 DeepSeek-V3.2 上达到 43.1% 成功率。一个有意思的发现：不同模型对多 Agent 分解和迭代学习的响应差异很大，说明工作流进化的好处取决于底层执行模型的能力。完全开源，执行日志完整可审计。<br><b>启发：</b>"工作流进化"是一个很实用的范式——不只是 Agent 在进化，Agent 之间的协作拓扑也在进化。MCP 作为工具发现层的设计值得关注，它把"发现工具"从人工配置变成了自动化流程。</p>
-        <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2603.28986" target="_blank">arXiv 2603.28986</a></div>
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.00824" target="_blank">arXiv 2604.00824</a></div>
         </div>
       </div>
     </div>
 
     <div class="foot">
-      生成：AI 自动化检索 · 自演化 Agent 专题 · 2026-04-02
+      生成：AI 自动化检索 · LLM Agent 记忆与推理专题 · 2026-04-03
     </div>
   </div>
 </body>
