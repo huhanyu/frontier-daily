@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>前沿优化早报 · 2026-04-08</title>
+  <title>前沿优化早报 · 2026-04-09</title>
   <style>
     :root {
       --bg-body: #F8FAFC;
@@ -113,18 +113,18 @@
 <body>
   <div class="wrap">
     <div class="hero">
-      <h1>前沿优化早报 · 2026-04-08</h1>
+      <h1>前沿优化早报 · 2026-04-09</h1>
       <div class="meta">
-        <span class="pill">主线：Agent 进化 · 记忆系统 · 推理优化</span>
+        <span class="pill">主线：Agent 进化 · 记忆系统 · 科学发现</span>
         <span class="pill">来源：arXiv 2604.xxxxx</span>
         <span class="pill">自动发布：每日 UTC 00:30</span>
       </div>
       <div class="kpis">
-        <div class="kpi"><div class="n">10</div><div class="l">本期论文</div></div>
+        <div class="kpi"><div class="n">6</div><div class="l">本期论文</div></div>
         <div class="kpi"><div class="n">3</div><div class="l">主题板块</div></div>
         <div class="kpi"><div class="n">全新</div><div class="l">无重复</div></div>
       </div>
-      <div class="hero-note">今日关键词：<b>进化</b>、<b>记忆</b>、<b>推理</b>。围绕三大方向展开——Agent 进化（GEPA 主动学习评估、EvoSkills 共进化验证、AgenticRed 红队演进）、记忆系统（MemMachine 保真记忆、Memory Intelligence Agent）和推理效率（SkillRT 技能编译、长上下文结构化推理）。</div>
+      <div class="hero-note">今日关键词：<b>进化</b>、<b>共进化</b>、<b>科学发现</b>。围绕三大方向展开——Agent 进化（EvoSkills 共进化验证、AgenticRed 红队、RoboPhD 进化多样性）、记忆系统（MemMachine 保真记忆）、科学发现与数据库研究（AI-Driven Research、Auto Agents for Science）。</div>
     </div>
 
     <div class="grid">
@@ -132,23 +132,23 @@
         <h2>今日重磅</h2>
         <div class="chips">
           <span class="chip">Agent 进化</span>
-          <span class="chip">记忆系统</span>
-          <span class="chip">推理效率</span>
+          <span class="chip">共进化验证</span>
+          <span class="chip">科学发现</span>
         </div>
-        <p class="desc">三篇核心：GEPA 在有限评估预算下实现 Agent 进化（最高分 paper），MemMachine 提出事实保真持久记忆系统解决 LLM 遗忘问题，SkillRT 通过技能编译实现跨平台高效执行。</p>
+        <p class="desc">三篇核心：EvoSkills 通过共进化验证实现 Agent 技能自进化，AgenticRed 用进化的 Agentic 系统进行红队测试，RoboPhD 在有限评估预算下进化多样化复杂 Agent。</p>
         <div class="btns">
-          <a class="btn btn-primary" href="https://arxiv.org/abs/2604.04347" target="_blank">Evolving Diverse Agents</a>
-          <a class="btn" href="https://arxiv.org/abs/2604.04853" target="_blank">MemMachine</a>
-          <a class="btn" href="https://arxiv.org/abs/2604.03088" target="_blank">SkillRT</a>
+          <a class="btn btn-primary" href="https://arxiv.org/abs/2604.01687" target="_blank">EvoSkills</a>
+          <a class="btn" href="https://arxiv.org/abs/2601.13518" target="_blank">AgenticRed</a>
+          <a class="btn" href="https://arxiv.org/abs/2604.04347" target="_blank">RoboPhD</a>
         </div>
       </div>
       <div class="card">
         <h2>本期结构</h2>
-        <p class="desc"><b>Agent 进化</b>（4篇：GEPA 主动评估、EvoSkills 共进化、AgenticRed 红队、ASI-Evolve）、<b>记忆系统</b>（3篇：MemMachine、Memory Int. Agent、Memory Intelligence Agent）、<b>推理与适应</b>（3篇：SkillRT 技能编译、结构化推理 RAG、长上下文结构推理）。</p>
+        <p class="desc"><b>Agent 进化</b>（3篇：EvoSkills 共进化验证、AgenticRed 红队、RoboPhD 进化多样性）、<b>记忆系统</b>（1篇：MemMachine）、<b>科学发现</b>（2篇：AI-Driven Research、Auto Agents for Science）。</p>
         <div class="btns">
           <a class="btn" href="#sec-evo">Agent 进化</a>
           <a class="btn" href="#sec-memory">记忆系统</a>
-          <a class="btn" href="#sec-reasoning">推理与适应</a>
+          <a class="btn" href="#sec-science">科学发现</a>
         </div>
       </div>
     </div>
@@ -156,15 +156,6 @@
     <!-- Agent 进化 -->
     <div class="section" id="sec-evo">
       <h3>Agent 进化</h3>
-
-      <div class="item">
-        <div class="title">Evolving Diverse Complex Agents Under Tight Evaluation Budgets</div>
-        <p class="one"><b>一句话：</b>在有限评估预算下进化多样化复杂 Agent——GEPA 证明 LLMs 可引导 Agentic 工件的高效进化，即使评估资源极度紧张。</p>
-        <p class="sub"><b>核心思路：</b>2026 年 LLM 引导的 Agent 进化引发热潮，GEPA 和 Autoresearch 等系统展示了 LLMs 在有限评估预算下生成多样化高性能 Agent 的潜力。核心挑战：评估成本高（每个候选需要大量测试），如何在预算约束下高效进化。GEPA 通过主动学习选择最具信息量的测试用例，减少评估次数同时保持进化效果。方法结合了 LLM 生成候选和主动测试选择，形成高效的闭环进化。<br><b>启发：</b>评估成本是 Agent 进化的核心瓶颈——主动评估策略对实际部署有直接价值，也呼应了"极简评估"的方向。</p>
-        <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.04347" target="_blank">arXiv 2604.04347</a></div>
-        </div>
-      </div>
 
       <div class="item">
         <div class="title">EvoSkills: Self-Evolving Agent Skills via Co-Evolutionary Verification</div>
@@ -185,13 +176,14 @@
       </div>
 
       <div class="item">
-        <div class="title">ASI-Evolve: AI Accelerates AI</div>
-        <p class="one"><b>一句话：</b>AI 加速 AI——用 LLM 驱动的自动化探索模型架构设计、科学假设发现，展示 ASI 对 AI 本身的加速效应。</p>
-        <p class="sub"><b>核心思路：</b>ASI-Evolve 探索 LLM 在科学发现中的元能力——不仅用 LLM 做任务，更用 LLM 来改进 LLM 本身。四个主任务：模型架构搜索（让 LLM 搜索更好的 Transformer 变体）、科学假设发现（自动生成并验证假说）、代码优化（LLM 改进 LLM 生成的代码）和数学推理（自我修正）。实验结果表明，ASI 驱动的探索在效率上显著优于人工设计基线。<br><b>启发：</b>自我改进的闭环方向，展示了"AI 造 AI"的雏形——虽然目前阶段仍有局限，但方向值得关注。</p>
+        <div class="title">RoboPhD: Evolving Diverse Complex Agents Under Tight Evaluation Budgets</div>
+        <p class="one"><b>一句话：</b>在有限评估预算下进化多样化复杂 Agent——系统比较三种优化范式（Elo 锦标赛选择、GEPA、贪心登山）。</p>
+        <p class="sub"><b>核心思路：</b>LLM 引导的 Agent 进化在 2026 年引发热潮，但评估成本高昂——每个候选需要大量测试。RoboPhD 首次系统比较了三种优化范式：Elo 锦标赛选择（RoboPhD）、Pareto-based 选择（GEPA）和贪心登山。核心发现：在有限评估预算下，如何选择测试用例比选择候选更重要。主动学习选择最具信息量的测试可显著提升进化效率。<br><b>启发：</b>评估成本是 Agent 进化的核心瓶颈——主动评估策略对实际部署有直接价值。</p>
         <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2603.29640" target="_blank">arXiv 2603.29640</a></div>
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.04347" target="_blank">arXiv 2604.04347</a></div>
         </div>
       </div>
+
     </div>
 
     <!-- 记忆系统 -->
@@ -207,60 +199,34 @@
         </div>
       </div>
 
-      <div class="item">
-        <div class="title">Memory Intelligence Agent</div>
-        <p class="one"><b>一句话：</b>深度研究智能体（DRA）记忆系统综述——系统分析外部工具、LLM 推理与记忆系统的集成设计空间。</p>
-        <p class="sub"><b>核心思路：</b>Deep Research Agents 结合了 LLM 推理能力与外部工具调用，但如何在长期任务中保持一致性和效率仍是挑战。本文系统分析了记忆系统对 DRA 的必要性：从情景记忆（近期交互记录）到语义记忆（任务相关知识）再到工作记忆（当前状态维护），构建完整记忆层。核心创新在于记忆的动态检索与更新机制——根据任务上下文主动选择调用哪一层记忆，而非被动依赖全部历史。实验表明，带记忆的 DRA 在长程任务中显著优于无记忆基线。<br><b>启发：</b>记忆不是越多越好——关键在于何时检索哪一层。这对构建真正"懂上下文"的 Agent 系统有直接指导意义。</p>
-        <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.04503" target="_blank">arXiv 2604.04503</a></div>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="title">RAG or Learning? Understanding the Limits of LLM Adaptation</div>
-        <p class="one"><b>一句话：</b>RAG 还是微调？系统性分析 LLM 适应策略的边界——知识随时间漂移时哪种方法更鲁棒。</p>
-        <p class="sub"><b>核心思路：</b>事实、实体和事件随时间变化，模型可能经历"持续知识漂移"，不仅导致过时预测，还造成时间不一致的推理。本文系统对比了 RAG（检索增强生成）和持续学习两种适应策略在知识漂移场景下的表现。研究发现：RAG 在快速更新知识方面更优（插入新文档即可），但在学习深层推理模式方面不如持续微调。关键发现：当知识漂移涉及推理链路的改变时，两种方法都存在局限——单纯检索无法解决推理模式过时的问题。<br><b>启发：</b>RAG 和微调不是非此即彼——可能需要联合方案，或者根据知识类型（事实 vs 推理模式）选择不同策略。</p>
-        <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.05096" target="_blank">arXiv 2604.05096</a></div>
-        </div>
-      </div>
     </div>
 
-    <!-- 推理与适应 -->
-    <div class="section" id="sec-reasoning">
-      <h3>推理与适应</h3>
+    <!-- 科学发现 -->
+    <div class="section" id="sec-science">
+      <h3>科学发现</h3>
 
       <div class="item">
-        <div class="title">SkillRT: Compiling Skills for Efficient Execution Everywhere</div>
-        <p class="one"><b>一句话：</b>技能编译优化 Agent 执行效率——在技能级、任务级和指令级三个粒度提取并行性，显著提升跨平台执行效率。</p>
-        <p class="sub"><b>核心思路：</b>SkillRT 研究如何让 Agent 技能在各种执行环境中高效运行。核心思想：从技能中提取三个粒度的并行性机会——技能内并行（单个技能内部的子任务可同时执行）、任务间并行（多个独立任务可分配给不同 Agent）、指令级并行（单个推理步骤中的多路并发）。显式将这些并行机会暴露给 Agent harness，运行时即可最大化资源利用率。实验在多种 Agent 任务上验证了效率提升。<br><b>启发：</b>技能编译的思想很实用——将专家编写的技能流程编译为可优化的执行计划，比运行时动态解析更高效。</p>
+        <div class="title">AI-Driven Research for Databases</div>
+        <p class="one"><b>一句话：</b>数据库领域 AI 驱动研究综述——全面调查自进化 AI Agent，连接基础模型与终身高 Agent 系统的新范式。</p>
+        <p class="sub"><b>核心思路：</b>本文是数据库领域首个系统性调查 AI 驱动研究的综述。核心贡献：提出自进化 AI Agent 的统一框架，连接基础模型与终身高 Agent 系统。涵盖四个维度：LLM 驱动的查询优化、自适应索引调整、自动化数据清理和实验自动化。关键发现：当前系统可分为"辅助增强"和"完全自动化"两类，后者仍在早期阶段但潜力巨大。引用了自进化 AI Agent 综述（arXiv:2508.07407）作为理论基础。<br><b>启发：</b>数据库作为 AI 研究的重要应用场景，正在经历从"用 AI 优化 DB"到"让 AI 自己优化 DB"的范式转变。</p>
         <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.03088" target="_blank">arXiv 2604.03088</a></div>
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.06566" target="_blank">arXiv 2604.06566</a></div>
         </div>
       </div>
 
       <div class="item">
-        <div class="title">Yet Even Less Is Even Better For Agentic, Reasoning, and Coding</div>
-        <p class="one"><b>一句话：</b>极简 Agent 设计的极致探索——Anthropic Claude Code 等案例表明，更少的中间步骤反而带来更强的 Agent 表现。</p>
-        <p class="sub"><b>核心思路：</b>本文探索一个反直觉的方向：减少 Agent 的中间推理步骤和工具调用，是否反而能提升性能？通过分析 Claude Code 等案例，研究者发现极简设计（更少的 CoT、更直接的工具调用）在特定任务上优于复杂的多步骤推理。核心假设：当模型足够强时，额外的推理中间层反而引入噪声和延迟。实验覆盖 Agentic 任务、推理任务和代码生成任务，验证了"少即是多"的有效性。<br><b>启发：</b>模型能力的提升正在改变 Agent 设计的最佳实践——简单粗暴的端到端方法有时优于精心设计的中间步骤。但具体边界在哪里还需要更多研究。</p>
+        <div class="title">Autonomous Agents for Scientific Discovery: Orchestrating Scientists, Language, Code, and Physics</div>
+        <p class="one"><b>一句话：</b>科学发现自动化 Agent 系统——协调科学家、语言、代码与物理，实现假设发现的自动化。</p>
+        <p class="sub"><b>核心思路：</b>本文探索用自主 Agent 进行科学发现——不仅执行任务，更能生成新假设。系统架构包含四个核心组件：科学家 Agent（领域知识）、语言 Agent（文献理解与生成）、代码 Agent（实验执行）和物理 Agent（仿真验证）。关键创新：知识提取模块从海量文献中抽取隐含假设，形成假设候选池；然后通过跨 Agent 协作验证假设可行性。实验覆盖材料科学和天体物理两个领域，验证了自动化假设发现的潜力。<br><b>启发：</b>科学发现的自动化正在从"执行已知流程"向"生成新假设"演进——多 Agent 协作是实现这一目标的关键架构。</p>
         <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.00824" target="_blank">arXiv 2604.00824</a></div>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="title">Structure-Originated Reasoning Data Improves Long-Context Understanding</div>
-        <p class="one"><b>一句话：</b>结构化推理数据提升长上下文理解——通过显式建模文本结构信息，帮助 LLM 在超长上下文中更准确地定位和推理关键信息。</p>
-        <p class="sub"><b>核心思路：</b>LLM 在处理越来越长的上下文（现代系统已达百万 token 量级）时仍面临挑战：大海捞针能力不等于有效理解。本文提出"结构化推理数据"方法：不是直接喂入原始长文本，而是在预训练/微调数据中显式建模文本的结构信息（章节关系、逻辑依赖、关键实体分布等），让模型学会"按结构推理"而非"线性扫描"。实验在多个长上下文 benchmark 上验证了方法的有效性，特别是涉及跨文档的信息整合任务。<br><b>启发：</b>长上下文模型的瓶颈可能不是容量，而是利用率——教会模型"读懂结构"比单纯扩展上下文窗口更重要。</p>
-        <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.05114" target="_blank">arXiv 2604.05114</a></div>
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2510.09901" target="_blank">arXiv 2510.09901</a></div>
         </div>
       </div>
 
     </div>
 
     <div class="foot">
-      生成：AI 自动化检索 · Agent 进化 / 记忆系统 / 推理优化专题 · 2026-04-08
+      生成：AI 自动化检索 · Agent 进化 / 记忆系统 / 科学发现专题 · 2026-04-09
     </div>
   </div>
 </body>
