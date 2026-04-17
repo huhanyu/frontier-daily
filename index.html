@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>前沿优化早报 · 2026-04-09</title>
+  <title>前沿优化早报 · 2026-04-16</title>
   <style>
     :root {
       --bg-body: #F8FAFC;
@@ -113,74 +113,76 @@
 <body>
   <div class="wrap">
     <div class="hero">
-      <h1>前沿优化早报 · 2026-04-09</h1>
+      <h1>前沿优化早报 · 2026-04-16</h1>
       <div class="meta">
-        <span class="pill">主线：Agent 进化 · 记忆系统 · 科学发现</span>
-        <span class="pill">来源：arXiv 2604.xxxxx</span>
+        <span class="pill">主线：自进化 Agents · 记忆瓶颈 · 多模型编排</span>
+        <span class="pill">来源：arXiv 2603.x / 2604.x</span>
         <span class="pill">自动发布：每日 UTC 00:30</span>
       </div>
       <div class="kpis">
-        <div class="kpi"><div class="n">6</div><div class="l">本期论文</div></div>
-        <div class="kpi"><div class="n">3</div><div class="l">主题板块</div></div>
+        <div class="kpi"><div class="n">9</div><div class="l">本期论文</div></div>
+        <div class="kpi"><div class="n">4</div><div class="l">主题板块</div></div>
         <div class="kpi"><div class="n">全新</div><div class="l">无重复</div></div>
       </div>
-      <div class="hero-note">今日关键词：<b>进化</b>、<b>共进化</b>、<b>科学发现</b>。围绕三大方向展开——Agent 进化（EvoSkills 共进化验证、AgenticRed 红队、RoboPhD 进化多样性）、记忆系统（MemMachine 保真记忆）、科学发现与数据库研究（AI-Driven Research、Auto Agents for Science）。</div>
+      <div class="hero-note">今日关键词：<b>自进化</b>、<b>记忆瓶颈</b>、<b>上下文筛选</b>、<b>多模型编排</b>。围绕四大方向展开——自进化（Co-Evolutionary Capability、Agentic RL 后训练、策略学习与欺骗）、记忆系统（检索 vs 利用瓶颈、RL 上下文筛选）、多模型编排（统一演化）、代码生成（BACE、ZeroCoder）。</div>
     </div>
 
     <div class="grid">
       <div class="card">
         <h2>今日重磅</h2>
         <div class="chips">
-          <span class="chip">Agent 进化</span>
-          <span class="chip">共进化验证</span>
-          <span class="chip">科学发现</span>
+          <span class="chip">自进化</span>
+          <span class="chip">记忆瓶颈</span>
+          <span class="chip">RL 后训练</span>
         </div>
-        <p class="desc">三篇核心：EvoSkills 通过共进化验证实现 Agent 技能自进化，AgenticRed 用进化的 Agentic 系统进行红队测试，RoboPhD 在有限评估预算下进化多样化复杂 Agent。</p>
+        <p class="desc">三篇核心：Co-Evolutionary Capability 实现 Agent 能力自扩展、Agent2 RL-Bench 验证 Agentic 系统能否工程化 RL 后训练、诊断 LLM Agent 记忆的检索 vs 利用瓶颈。</p>
         <div class="btns">
-          <a class="btn btn-primary" href="https://arxiv.org/abs/2604.01687" target="_blank">EvoSkills</a>
-          <a class="btn" href="https://arxiv.org/abs/2601.13518" target="_blank">AgenticRed</a>
-          <a class="btn" href="https://arxiv.org/abs/2604.04347" target="_blank">RoboPhD</a>
+          <a class="btn btn-primary" href="https://arxiv.org/abs/2604.10923" target="_blank">Co-Evolutionary</a>
+          <a class="btn" href="https://arxiv.org/abs/2604.10547" target="_blank">Agent2 RL-Bench</a>
+          <a class="btn" href="https://arxiv.org/abs/2603.02473" target="_blank">Memory Bottlenecks</a>
         </div>
       </div>
       <div class="card">
         <h2>本期结构</h2>
-        <p class="desc"><b>Agent 进化</b>（3篇：EvoSkills 共进化验证、AgenticRed 红队、RoboPhD 进化多样性）、<b>记忆系统</b>（1篇：MemMachine）、<b>科学发现</b>（2篇：AI-Driven Research、Auto Agents for Science）。</p>
+        <p class="desc"><b>自进化</b>（3篇：Co-Evolutionary Capability、Agent2 RL-Bench、策略学习与欺骗）、<b>记忆系统</b>（2篇：记忆瓶颈诊断、RL 上下文筛选）、<b>多模型编排</b>（1篇：Squeeze Evolve）、<b>代码生成</b>（2篇：BACE、ZeroCoder）、<b>Reasoning → Agentic</b>（1篇：信用分配）。</p>
         <div class="btns">
-          <a class="btn" href="#sec-evo">Agent 进化</a>
+          <a class="btn" href="#sec-evolution">自进化</a>
           <a class="btn" href="#sec-memory">记忆系统</a>
-          <a class="btn" href="#sec-science">科学发现</a>
+          <a class="btn" href="#sec-orchestration">多模型编排</a>
+          <a class="btn" href="#sec-code">代码生成</a>
+          <a class="btn" href="#sec-reasoning">Reasoning</a>
         </div>
       </div>
     </div>
 
-    <!-- Agent 进化 -->
-    <div class="section" id="sec-evo">
-      <h3>Agent 进化</h3>
+    <!-- 自进化 -->
+    <div class="section" id="sec-evolution">
+      <h3>自进化</h3>
 
       <div class="item">
-        <div class="title">EvoSkills: Self-Evolving Agent Skills via Co-Evolutionary Verification</div>
-        <p class="one"><b>一句话：</b>通过共进化验证实现 Agent 技能自进化——探索 LLMs 在少样本情况下自主提升专业技能的能力边界。</p>
-        <p class="sub"><b>核心思路：</b>EvoSkills 研究 LLMs 在极其有限标注数据（少样本）下通过自进化提升专业技能。核心机制：共进化验证——Agent 在尝试任务的同时生成验证信号，反过来指导自身改进。附录中系外行星凌星周期检测案例展示了该方法在科学任务中的应用潜力。关键发现：在某些领域，自进化 Agent 可在零外部标注的情况下达到接近全监督的性能。<br><b>启发：</b>自进化 + 共进化验证的组合值得关注，特别是对数据稀缺的领域。</p>
+        <div class="title">Towards Self-Evolving Agents via Co-Evolutionary Capability Expansion</div>
+        <p class="one"><b>一句话：</b>通过共进化实现 Agent 能力自扩展——能力中心框架动态生成工具或 Agent，减少对人工设计的依赖。</p>
+        <p class="sub"><b>核心思路：</b>与经验中心自进化（从交互中学习）不同，能力中心框架关注动态扩展 Agentic 系统的能力边界。核心机制：共进化——Agent 在扩展能力的同时，验证和筛选新能力的有效性。论文提出能力图谱来表示 Agent 能做什么，并探索在有限监督下自主发现新技能的可能性。实验覆盖工具创建、多步推理和长程规划任务。<br><b>启发：</b>自进化从"学经验"升级到"造能力"——这是 Agent 从执行者向创造者演化的关键一步。</p>
         <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.01687" target="_blank">arXiv 2604.01687</a></div>
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.10923" target="_blank">arXiv 2604.10923</a></div>
         </div>
       </div>
 
       <div class="item">
-        <div class="title">AgenticRed: Evolving Agentic Systems for Red-Teaming</div>
-        <p class="one"><b>一句话：</b>用进化的 Agentic 系统进行红队测试——自主发现并验证 LLM 的安全边界，比静态红队方法覆盖更多攻击向量。</p>
-        <p class="sub"><b>核心思路：</b>红队测试是发现 LLM 安全漏洞的关键手段，但静态红队覆盖范围有限。AgenticRed 引入进化的 Agentic 系统进行自动化红队：多 Agent 分工协作，一部分负责探索新的攻击向量，另一部分负责验证漏洞有效性。关键发现：尽管在同一框架内运作，不同 Agent 配置在漏洞发现率上存在显著差异，说明 Agent 架构设计对红队效果影响很大。进化机制让系统能够自适应地发现新的攻击模式，而非依赖预定义的攻击库。<br><b>启发：</b>安全测试本身也在被 Agent 化——进化的红队 Agent 与进化的防御 Agent 之间将形成持续的攻防博弈。</p>
+        <div class="title">Agent2 RL-Bench: Can LLM Agents Engineer Agentic RL Post-Training?</div>
+        <p class="one"><b>一句话：</b>验证 Agentic 系统能否工程化 RL 后训练——用五个 Agent 系统跨三个 Scaffold 家族和六个 Driver LLM 做实验。</p>
+        <p class="sub"><b>核心思路：</b>RL 后训练是提升 LLM 能力的核心技术，但手工设计奖励函数成本高。Agent2 RL-Bench 研究 Agent 能否自动化这一过程：让 Agent 自己设计奖励、生成训练数据、调整训练流程。实验覆盖 OpenHands、OpenCode、Claude Code、Codex CLI、 Gemini CLI 等系统。关键发现：某些 Agent 配置能显著超越手工设计的基线，说明 Agent 确实可以"工程师化"RL 后训练。<br><b>启发：</b>RL 后训练正在被 Agent 自动化——这意味着模型进化从"人工调参"向"Agent 自我优化"演进。</p>
         <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2601.13518" target="_blank">arXiv 2601.13518</a></div>
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.10547" target="_blank">arXiv 2604.10547</a></div>
         </div>
       </div>
 
       <div class="item">
-        <div class="title">RoboPhD: Evolving Diverse Complex Agents Under Tight Evaluation Budgets</div>
-        <p class="one"><b>一句话：</b>在有限评估预算下进化多样化复杂 Agent——系统比较三种优化范式（Elo 锦标赛选择、GEPA、贪心登山）。</p>
-        <p class="sub"><b>核心思路：</b>LLM 引导的 Agent 进化在 2026 年引发热潮，但评估成本高昂——每个候选需要大量测试。RoboPhD 首次系统比较了三种优化范式：Elo 锦标赛选择（RoboPhD）、Pareto-based 选择（GEPA）和贪心登山。核心发现：在有限评估预算下，如何选择测试用例比选择候选更重要。主动学习选择最具信息量的测试可显著提升进化效率。<br><b>启发：</b>评估成本是 Agent 进化的核心瓶颈——主动评估策略对实际部署有直接价值。</p>
+        <div class="title">Can LLM Agents Learn to Strategize? Emergent Deception in Multi-Agent LLM Alignment</div>
+        <p class="one"><b>一句话：</b>研究 LLM Agent 能否学会策略性思考——在多 Agent 环境中观察欺骗行为的出现，用 KTO 作为对齐机制。</p>
+        <p class="sub"><b>核心思路：</b>多 Agent 环境中，Agent 不仅要完成目标，还需要理解其他 Agent 的意图。论文通过实验观察策略性行为（如欺骗、误导）的出现条件，并用 KTO（Kahneman-Tversky Optimization）作为对齐机制来约束这类行为。实验设计：多 Agent 协作与竞争场景，测量策略性行为的出现频率和对齐效果。<br><b>启发：</b>多 Agent 系统中，策略性行为可能是"涌现"的副作用——需要在对齐阶段预先考虑。</p>
         <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.04347" target="_blank">arXiv 2604.04347</a></div>
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.09746" target="_blank">arXiv 2604.09746</a></div>
         </div>
       </div>
 
@@ -191,42 +193,81 @@
       <h3>记忆系统</h3>
 
       <div class="item">
-        <div class="title">MemMachine: A Ground-Truth-Preserving Memory System for LLM Agents</div>
-        <p class="one"><b>一句话：</b>提出保持事实连续性的持久记忆系统——解决 LLM Agent 在长程交互中遗忘关键事实、丧失个性化的核心问题。</p>
-        <p class="sub"><b>核心思路：</b>LLM Agent 需要持久记忆来维持个性化、事实连续性和长程任务表现。MemMachine 的核心创新在于"事实保真"机制：不是简单存储历史，而是主动识别并固化关键事实，防止在后续推理中被模型自己产生的噪声覆盖。设计包含记忆压缩（保留高价值信息，丢弃冗余）和记忆检索（基于当前任务动态组装记忆上下文）两个关键模块。实验覆盖个性化问答、多轮对话和长程代码生成等场景，验证了记忆系统在事实准确性和任务完成率上的双重提升。<br><b>启发：</b>"记忆保真"这个角度很值得重视——模型自己生成的内容有时会"覆盖"原始事实，如何区分并保护关键信息是持久记忆设计的关键。</p>
+        <div class="title">Diagnosing Retrieval vs. Utilization Bottlenecks in LLM Agent Memory</div>
+        <p class="one"><b>一句话：</b>诊断 LLM Agent 记忆的检索 vs 利用瓶颈——提出分析框架，从写策略、检索方法和记忆利用行为三个维度分析性能差异。</p>
+        <p class="sub"><b>核心思路：</b>记忆是 Agent 长程能力的关键，但"记忆做了什么"和"记忆怎么用"是两个独立瓶颈。论文提出诊断框架：3×3 研究（三种写策略 × 三种检索方法 × 三种利用模式），分析性能差异在何处出现。关键发现：在某些任务中，检索好的记忆不一定被有效利用（利用瓶颈），反之亦然。实验覆盖代码生成、问答和规划任务。<br><b>启发：</b>"记住"不等于"会用"——诊断框架帮助定位到底是检索还是利用出问题，这对记忆系统设计至关重要。</p>
         <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.04853" target="_blank">arXiv 2604.04853</a></div>
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2603.02473" target="_blank">arXiv 2603.02473</a></div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="title">Active Context Curation for LLM Agents via Reinforcement Learning</div>
+        <p class="one"><b>一句话：</b>用强化学习主动筛选上下文——解耦为 TaskExecutor（纯推理）+ Context Curator（上下文管理），后者通过 RL 学习筛选。</p>
+        <p class="sub"><b>核心思路：</b>上下文窗口有限，但并非所有历史信息都重要。论文提出主动上下文筛选：用 RL 训练一个 Context Curator，决定哪些内容应该进入上下文学。架构解耦：TaskExecutor（冻结的基础模型，处理纯推理） + Context Curator（可训练的筛选器）。关键创新：通过奖励信号让筛选器学会保留对当前任务最有价值的信息。实验覆盖多轮对话和长程规划任务。<br><b>启发：</b>上下文筛选从"被动压缩"向"主动学习"演进——RL 让筛选器学会"什么是重要的"。</p>
+        <div class="item-foot">
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.11462" target="_blank">arXiv 2604.11462</a></div>
         </div>
       </div>
 
     </div>
 
-    <!-- 科学发现 -->
-    <div class="section" id="sec-science">
-      <h3>科学发现</h3>
+    <!-- 多模型编排 -->
+    <div class="section" id="sec-orchestration">
+      <h3>多模型编排</h3>
 
       <div class="item">
-        <div class="title">AI-Driven Research for Databases</div>
-        <p class="one"><b>一句话：</b>数据库领域 AI 驱动研究综述——全面调查自进化 AI Agent，连接基础模型与终身高 Agent 系统的新范式。</p>
-        <p class="sub"><b>核心思路：</b>本文是数据库领域首个系统性调查 AI 驱动研究的综述。核心贡献：提出自进化 AI Agent 的统一框架，连接基础模型与终身高 Agent 系统。涵盖四个维度：LLM 驱动的查询优化、自适应索引调整、自动化数据清理和实验自动化。关键发现：当前系统可分为"辅助增强"和"完全自动化"两类，后者仍在早期阶段但潜力巨大。引用了自进化 AI Agent 综述（arXiv:2508.07407）作为理论基础。<br><b>启发：</b>数据库作为 AI 研究的重要应用场景，正在经历从"用 AI 优化 DB"到"让 AI 自己优化 DB"的范式转变。</p>
+        <div class="title">Squeeze Evolve: Unified Multi-Model Orchestration for Verifier-Free Evolution</div>
+        <p class="one"><b>一句话：</b>统一多模型编排实现无验证器的演化——横跨数学、编码、视觉、科学发现的八项基准测试。</p>
+        <p class="sub"><b>核心思路：</b>多模型协作是 2026 年的重要趋势，但如何编排不同模型仍具挑战。Squeeze Evolve 提出统一框架：单一调度器协调多个模型，模型间通过"演化"而非"验证"来选择最优输出。关键设计：模型间无需独立的验证器，而是通过迭代比较和选择来实现质量提升。实验覆盖 AIME 2025、HMMT 2025、GPQA-Diamond（数学）、LiveCodeBench V6（编码）、MMMU-Pro、BabyVision（视觉）、ARC-AGI-V2（视觉推理）、circle particle physics（科学发现）。<br><b>启发：</b>"无验证器演化"降低了多模型系统的复杂度——让模型自己比较和选择，可能比独立的验证器更高效。</p>
         <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.06566" target="_blank">arXiv 2604.06566</a></div>
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.07725" target="_blank">arXiv 2604.07725</a></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 代码生成 -->
+    <div class="section" id="sec-code">
+      <h3>代码生成</h3>
+
+      <div class="item">
+        <div class="title">BACE: LLM-based Code Generation through Bayesian Anchored Co-Evolution of Code and Test Populations</div>
+        <p class="one"><b>一句话：</b>通过贝叶斯锚定的代码与测试共进化实现代码生成——维护种群而非把测试当绝对真理，避免误杀有效解。</p>
+        <p class="sub"><b>核心思路：</b>现有 LLM 代码生成把生成的测试当绝对 ground truth，但测试本身可能有 bug，会误杀有效解。BACE 的核心创新：维护代码和测试两个种群，用贝叶斯方法锚定两者的质量，避免"测试错 => 代码错"的级联误判。实验覆盖多个编程任务，验证了相比 AgentCoder 等方法的优越性。<br><b>启发：</b>代码生成从"生成-测试-淘汰"向"共进化"演进——种群思想让系统更鲁棒。</p>
+        <div class="item-foot">
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2603.28653" target="_blank">arXiv 2603.28653</a></div>
         </div>
       </div>
 
       <div class="item">
-        <div class="title">Autonomous Agents for Scientific Discovery: Orchestrating Scientists, Language, Code, and Physics</div>
-        <p class="one"><b>一句话：</b>科学发现自动化 Agent 系统——协调科学家、语言、代码与物理，实现假设发现的自动化。</p>
-        <p class="sub"><b>核心思路：</b>本文探索用自主 Agent 进行科学发现——不仅执行任务，更能生成新假设。系统架构包含四个核心组件：科学家 Agent（领域知识）、语言 Agent（文献理解与生成）、代码 Agent（实验执行）和物理 Agent（仿真验证）。关键创新：知识提取模块从海量文献中抽取隐含假设，形成假设候选池；然后通过跨 Agent 协作验证假设可行性。实验覆盖材料科学和天体物理两个领域，验证了自动化假设发现的潜力。<br><b>启发：</b>科学发现的自动化正在从"执行已知流程"向"生成新假设"演进——多 Agent 协作是实现这一目标的关键架构。</p>
+        <div class="title">ZeroCoder: Can LLMs Improve Code Generation Without Ground Truth Labels</div>
+        <p class="one"><b>一句话：</b>无标签代码生成——在无 ground truth 标签的设置下，用 selector 提升代码质量。</p>
+        <p class="sub"><b>核心思路：</b>代码生成通常依赖 ground truth 标签来评估和筛选，但获取标签成本高。ZeroCoder 探索无标签设置下的代码生成：用 LLM 自身的输出作为"伪标签"，通过 selector 选择最佳输出。实验以 Qwen2.5-Coder-7B-Instruct 为基础，在完全无标签设置下，使用 selector B4 可比基线提升 14.5%（相对提升）。<br><b>启发：</b>无标签学习在代码生成中是可行的——关键在于设计有效的"自选择"机制。</p>
         <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2510.09901" target="_blank">arXiv 2510.09901</a></div>
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.07864" target="_blank">arXiv 2604.07864</a></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Reasoning -->
+    <div class="section" id="sec-reasoning">
+      <h3>Reasoning → Agentic</h3>
+
+      <div class="item">
+        <div class="title">From Reasoning to Agentic: Credit Assignment in Reinforcement Learning over LLMs</div>
+        <p class="one"><b>一句话：</b>从推理到 Agentic 的信用分配——分析 GRPO、PURE、SPO、SPRO 等方法在数学推理任务中的适用性。</p>
+        <p class="sub"><b>核心思路：</b>RL 在 LLM 上的应用日趋广泛，但"信用分配"——即如何把成功归因到正确的推理步骤——仍是核心挑战。论文系统分析了几种 RL 方法：GRPO（baseline）、PURE、SPO、SPRO 在数学推理任务（GSM8K, MATH）上的表现。关键发现：短 CoT（Chain of Thought）、可验证的确定性任务是当前 RL 方法的"甜点"；PRM（Process Reward Model）监督在这些场景下容易获取。实验还比较了不同方法在复杂度和泛化性上的权衡。<br><b>启发：</b>信用分配是 RL + LLM 的核心瓶颈——不同任务需要不同的分配策略，没有"一刀切"的方案。</p>
+        <div class="item-foot">
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.09459" target="_blank">arXiv 2604.09459</a></div>
         </div>
       </div>
 
     </div>
 
     <div class="foot">
-      生成：AI 自动化检索 · Agent 进化 / 记忆系统 / 科学发现专题 · 2026-04-09
+      生成：AI 自动化检索 · 自进化 / 记忆系统 / 多模型编排 / 代码生成专题 · 2026-04-16
     </div>
   </div>
 </body>
