@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>前沿优化早报 · 2026-04-16</title>
+  <title>前沿优化早报 · 2026-04-21</title>
   <style>
     :root {
       --bg-body: #F8FAFC;
@@ -113,10 +113,10 @@
 <body>
   <div class="wrap">
     <div class="hero">
-      <h1>前沿优化早报 · 2026-04-16</h1>
+      <h1>前沿优化早报 · 2026-04-21</h1>
       <div class="meta">
-        <span class="pill">主线：自进化 Agents · 记忆瓶颈 · 多模型编排</span>
-        <span class="pill">来源：arXiv 2603.x / 2604.x</span>
+        <span class="pill">主线：AgentGA · 经验压缩 · 指令分层 · 知识漂移</span>
+        <span class="pill">来源：arXiv 2604.x</span>
         <span class="pill">自动发布：每日 UTC 00:30</span>
       </div>
       <div class="kpis">
@@ -124,7 +124,7 @@
         <div class="kpi"><div class="n">4</div><div class="l">主题板块</div></div>
         <div class="kpi"><div class="n">全新</div><div class="l">无重复</div></div>
       </div>
-      <div class="hero-note">今日关键词：<b>自进化</b>、<b>记忆瓶颈</b>、<b>上下文筛选</b>、<b>多模型编排</b>。围绕四大方向展开——自进化（Co-Evolutionary Capability、Agentic RL 后训练、策略学习与欺骗）、记忆系统（检索 vs 利用瓶颈、RL 上下文筛选）、多模型编排（统一演化）、代码生成（BACE、ZeroCoder）。</div>
+      <div class="hero-note">今日关键词：<b>AgentGA</b>、<b>经验压缩</b>、<b>指令分层</b>、<b>知识漂移</b>。围绕四大方向展开——自进化（AgentGA、Co-Evolutionary、预测 Agent）、记忆系统（经验压缩谱、上下文筛选）、指令分层、连续知识漂移。</div>
     </div>
 
     <div class="grid">
@@ -132,25 +132,25 @@
         <h2>今日重磅</h2>
         <div class="chips">
           <span class="chip">自进化</span>
-          <span class="chip">记忆瓶颈</span>
-          <span class="chip">RL 后训练</span>
+          <span class="chip">经验压缩</span>
+          <span class="chip">AgentGA</span>
         </div>
-        <p class="desc">三篇核心：Co-Evolutionary Capability 实现 Agent 能力自扩展、Agent2 RL-Bench 验证 Agentic 系统能否工程化 RL 后训练、诊断 LLM Agent 记忆的检索 vs 利用瓶颈。</p>
+        <p class="desc">三篇核心：AgentGA 用演化方法优化 Agent Seed 空间、Experience Compression Spectrum 统一记忆/技能/规则于单一压缩轴、知识漂移下的 RAG vs 微调选择。</p>
         <div class="btns">
-          <a class="btn btn-primary" href="https://arxiv.org/abs/2604.10923" target="_blank">Co-Evolutionary</a>
-          <a class="btn" href="https://arxiv.org/abs/2604.10547" target="_blank">Agent2 RL-Bench</a>
-          <a class="btn" href="https://arxiv.org/abs/2603.02473" target="_blank">Memory Bottlenecks</a>
+          <a class="btn btn-primary" href="https://arxiv.org/abs/2604.14655" target="_blank">AgentGA</a>
+          <a class="btn" href="https://arxiv.org/abs/2604.15877" target="_blank">经验压缩</a>
+          <a class="btn" href="https://arxiv.org/abs/2604.05096" target="_blank">知识漂移</a>
         </div>
       </div>
       <div class="card">
         <h2>本期结构</h2>
-        <p class="desc"><b>自进化</b>（3篇：Co-Evolutionary Capability、Agent2 RL-Bench、策略学习与欺骗）、<b>记忆系统</b>（2篇：记忆瓶颈诊断、RL 上下文筛选）、<b>多模型编排</b>（1篇：Squeeze Evolve）、<b>代码生成</b>（2篇：BACE、ZeroCoder）、<b>Reasoning → Agentic</b>（1篇：信用分配）。</p>
+        <p class="desc"><b>自进化</b>（4篇：AgentGA、Co-Evolutionary、预测 Agent、DarwinNet）、<b>记忆系统</b>（2篇：经验压缩谱、上下文筛选）、<b>指令分层</b>（1篇：多层级指令）、<b>推理→Agentic</b>（1篇：信用分配）、<b>RAG vs 学习</b>（1篇：知识漂移）。</p>
         <div class="btns">
           <a class="btn" href="#sec-evolution">自进化</a>
           <a class="btn" href="#sec-memory">记忆系统</a>
-          <a class="btn" href="#sec-orchestration">多模型编排</a>
-          <a class="btn" href="#sec-code">代码生成</a>
+          <a class="btn" href="#sec-instruction">指令分层</a>
           <a class="btn" href="#sec-reasoning">Reasoning</a>
+          <a class="btn" href="#sec-rag">RAG vs 学习</a>
         </div>
       </div>
     </div>
@@ -160,29 +160,38 @@
       <h3>自进化</h3>
 
       <div class="item">
+        <div class="title">AgentGA: Evolving Code Solutions in Agent-Seed Space</div>
+        <p class="one"><b>一句话：</b>在 Agent-Seed 空间中演化代码解决方案——优化任务提示符（Agent Seed），而非直接优化代码。</p>
+        <p class="sub"><b>核心思路：</b>传统代码生成直接优化生成的代码，AgentGA 另辟蹊径：优化"Agent Seed"——即任务提示符 + 可选的父种群档案。核心创新：将代码生成视为演化问题，在 Seed 空间中而非代码空间中搜索。实验验证：在多个代码生成基准上，AgentGA 显著优于基线方法。<br><b>启发：</b>从"优化代码"升级到"优化提示符"——这是 Agent 代码生成的新思路。</p>
+        <div class="item-foot">
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.14655" target="_blank">arXiv 2604.14655</a></div>
+        </div>
+      </div>
+
+      <div class="item">
         <div class="title">Towards Self-Evolving Agents via Co-Evolutionary Capability Expansion</div>
-        <p class="one"><b>一句话：</b>通过共进化实现 Agent 能力自扩展——能力中心框架动态生成工具或 Agent，减少对人工设计的依赖。</p>
-        <p class="sub"><b>核心思路：</b>与经验中心自进化（从交互中学习）不同，能力中心框架关注动态扩展 Agentic 系统的能力边界。核心机制：共进化——Agent 在扩展能力的同时，验证和筛选新能力的有效性。论文提出能力图谱来表示 Agent 能做什么，并探索在有限监督下自主发现新技能的可能性。实验覆盖工具创建、多步推理和长程规划任务。<br><b>启发：</b>自进化从"学经验"升级到"造能力"——这是 Agent 从执行者向创造者演化的关键一步。</p>
+        <p class="one"><b>一句话：</b>通过共进化实现 Agent 能力自扩展——能力中心框架动态生成工具或 Agent。</p>
+        <p class="sub"><b>核心思路：</b>与经验中心自进化（从交互中学习）不同，能力中心框架关注动态扩展 Agentic 系统的能力边界。核心机制：共进化——Agent 在扩展能力的同时验证新能力的有效性。实验覆盖工具创建、多步推理和长程规划任务。<br><b>启发：</b>自进化从"学经验"到"造能力"的升级。</p>
         <div class="item-foot">
           <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.10923" target="_blank">arXiv 2604.10923</a></div>
         </div>
       </div>
 
       <div class="item">
-        <div class="title">Agent2 RL-Bench: Can LLM Agents Engineer Agentic RL Post-Training?</div>
-        <p class="one"><b>一句话：</b>验证 Agentic 系统能否工程化 RL 后训练——用五个 Agent 系统跨三个 Scaffold 家族和六个 Driver LLM 做实验。</p>
-        <p class="sub"><b>核心思路：</b>RL 后训练是提升 LLM 能力的核心技术，但手工设计奖励函数成本高。Agent2 RL-Bench 研究 Agent 能否自动化这一过程：让 Agent 自己设计奖励、生成训练数据、调整训练流程。实验覆盖 OpenHands、OpenCode、Claude Code、Codex CLI、 Gemini CLI 等系统。关键发现：某些 Agent 配置能显著超越手工设计的基线，说明 Agent 确实可以"工程师化"RL 后训练。<br><b>启发：</b>RL 后训练正在被 Agent 自动化——这意味着模型进化从"人工调参"向"Agent 自我优化"演进。</p>
+        <div class="title">Harness Evolution for Future Prediction Agents</div>
+        <p class="one"><b>一句话：</b>利用演化方法构建未来预测 Agent——从时间对比中提取内部反馈。</p>
+        <p class="sub"><b>核心思路：</b>未来预测需要对未解决问题的反复推理。论文提出：从时间对比中提取内部反馈——在重复预测同一问题时，比较证据和判断如何随时间变化，提取反馈并更新模型。实验覆盖多个未来预测任务。<br><b>启发：</b>预测能力的自进化——让 Agent 从"过去的预测"中学习。</p>
         <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.10547" target="_blank">arXiv 2604.10547</a></div>
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.15719" target="_blank">arXiv 2604.15719</a></div>
         </div>
       </div>
 
       <div class="item">
-        <div class="title">Can LLM Agents Learn to Strategize? Emergent Deception in Multi-Agent LLM Alignment</div>
-        <p class="one"><b>一句话：</b>研究 LLM Agent 能否学会策略性思考——在多 Agent 环境中观察欺骗行为的出现，用 KTO 作为对齐机制。</p>
-        <p class="sub"><b>核心思路：</b>多 Agent 环境中，Agent 不仅要完成目标，还需要理解其他 Agent 的意图。论文通过实验观察策略性行为（如欺骗、误导）的出现条件，并用 KTO（Kahneman-Tversky Optimization）作为对齐机制来约束这类行为。实验设计：多 Agent 协作与竞争场景，测量策略性行为的出现频率和对齐效果。<br><b>启发：</b>多 Agent 系统中，策略性行为可能是"涌现"的副作用——需要在对齐阶段预先考虑。</p>
+        <div class="title">DarwinNet: An Evolutionary Network Architecture for Agent-Driven Protocol Synthesis</div>
+        <p class="one"><b>一句话：</b>生物启发的自进化网络架构——协议从设计时静态范式向运行时动态演化转变。</p>
+        <p class="sub"><b>核心思路：</b>传统网络协议是设计时静态的，难以适应动态环境。DarwinNet 提出自进化架构：协议在运行时动态演化以适应环境变化。核心创新：借鉴生物进化机制，让协议自主"突变"和"选择"。<br><b>启发：</b>网络协议的"自动驾驶"——协议自进化降低人工维护成本。</p>
         <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.09746" target="_blank">arXiv 2604.09746</a></div>
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.01236" target="_blank">arXiv 2604.01236</a></div>
         </div>
       </div>
 
@@ -193,18 +202,18 @@
       <h3>记忆系统</h3>
 
       <div class="item">
-        <div class="title">Diagnosing Retrieval vs. Utilization Bottlenecks in LLM Agent Memory</div>
-        <p class="one"><b>一句话：</b>诊断 LLM Agent 记忆的检索 vs 利用瓶颈——提出分析框架，从写策略、检索方法和记忆利用行为三个维度分析性能差异。</p>
-        <p class="sub"><b>核心思路：</b>记忆是 Agent 长程能力的关键，但"记忆做了什么"和"记忆怎么用"是两个独立瓶颈。论文提出诊断框架：3×3 研究（三种写策略 × 三种检索方法 × 三种利用模式），分析性能差异在何处出现。关键发现：在某些任务中，检索好的记忆不一定被有效利用（利用瓶颈），反之亦然。实验覆盖代码生成、问答和规划任务。<br><b>启发：</b>"记住"不等于"会用"——诊断框架帮助定位到底是检索还是利用出问题，这对记忆系统设计至关重要。</p>
+        <div class="title">Experience Compression Spectrum: Unifying Memory, Skills, and Rules in LLM Agents</div>
+        <p class="one"><b>一句话：</b>统一记忆、技能和规则于单一压缩轴——提出经验压缩谱概念。</p>
+        <p class="sub"><b>核心思路：</b>论文提出 Experience Compression Spectrum，将 Agent 的记忆、技能和规则统一在单一压缩轴上。核心贡献：(1) 形式化定义压缩谱；(2) 将 20+ 系统映射到该谱上，揭示现有系统都未达到最优压缩。关键发现：不同任务需要不同的压缩级别。<br><b>启发：</b>记忆/技能/规则不是割裂的——它们是压缩的不同层级。</p>
         <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2603.02473" target="_blank">arXiv 2603.02473</a></div>
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.15877" target="_blank">arXiv 2604.15877</a></div>
         </div>
       </div>
 
       <div class="item">
         <div class="title">Active Context Curation for LLM Agents via Reinforcement Learning</div>
-        <p class="one"><b>一句话：</b>用强化学习主动筛选上下文——解耦为 TaskExecutor（纯推理）+ Context Curator（上下文管理），后者通过 RL 学习筛选。</p>
-        <p class="sub"><b>核心思路：</b>上下文窗口有限，但并非所有历史信息都重要。论文提出主动上下文筛选：用 RL 训练一个 Context Curator，决定哪些内容应该进入上下文学。架构解耦：TaskExecutor（冻结的基础模型，处理纯推理） + Context Curator（可训练的筛选器）。关键创新：通过奖励信号让筛选器学会保留对当前任务最有价值的信息。实验覆盖多轮对话和长程规划任务。<br><b>启发：</b>上下文筛选从"被动压缩"向"主动学习"演进——RL 让筛选器学会"什么是重要的"。</p>
+        <p class="one"><b>一句话：</b>用 RL 主动筛选上下文——解耦 TaskExecutor + Context Curator。</p>
+        <p class="sub"><b>核心思路：</b>上下文窗口有限，需要筛选。论文用 RL 训练 Context Curator，决定哪些内容进入上下文。与 TaskExecutor（冻结基础模型）解耦。关键创新：通过奖励信号让筛选器学会保留对当前任务最有价值的信息。<br><b>启发：</b>上下文筛选从"被动压缩"向"主动学习"演进。</p>
         <div class="item-foot">
           <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.11462" target="_blank">arXiv 2604.11462</a></div>
         </div>
@@ -212,40 +221,16 @@
 
     </div>
 
-    <!-- 多模型编排 -->
-    <div class="section" id="sec-orchestration">
-      <h3>多模型编排</h3>
+    <!-- 指令分层 -->
+    <div class="section" id="sec-instruction">
+      <h3>指令分层</h3>
 
       <div class="item">
-        <div class="title">Squeeze Evolve: Unified Multi-Model Orchestration for Verifier-Free Evolution</div>
-        <p class="one"><b>一句话：</b>统一多模型编排实现无验证器的演化——横跨数学、编码、视觉、科学发现的八项基准测试。</p>
-        <p class="sub"><b>核心思路：</b>多模型协作是 2026 年的重要趋势，但如何编排不同模型仍具挑战。Squeeze Evolve 提出统一框架：单一调度器协调多个模型，模型间通过"演化"而非"验证"来选择最优输出。关键设计：模型间无需独立的验证器，而是通过迭代比较和选择来实现质量提升。实验覆盖 AIME 2025、HMMT 2025、GPQA-Diamond（数学）、LiveCodeBench V6（编码）、MMMU-Pro、BabyVision（视觉）、ARC-AGI-V2（视觉推理）、circle particle physics（科学发现）。<br><b>启发：</b>"无验证器演化"降低了多模型系统的复杂度——让模型自己比较和选择，可能比独立的验证器更高效。</p>
+        <div class="title">Many-Tier Instruction Hierarchy in LLM Agents</div>
+        <p class="one"><b>一句话：</b>多层级指令层次结构——从原子指令到完整程序的系统化组织。</p>
+        <p class="sub"><b>核心思路：</b>复杂任务需要分解为多层级指令。论文提出 Many-Tier Instruction Hierarchy：系统化组织从原子指令到完整程序的层级。核心贡献：编码子集（427 样本）覆盖 MBPP 编程任务，验证层级有效性。<br><b>启发：</b>指令不是扁平的——层级结构让复杂任务可分解。</p>
         <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.07725" target="_blank">arXiv 2604.07725</a></div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- 代码生成 -->
-    <div class="section" id="sec-code">
-      <h3>代码生成</h3>
-
-      <div class="item">
-        <div class="title">BACE: LLM-based Code Generation through Bayesian Anchored Co-Evolution of Code and Test Populations</div>
-        <p class="one"><b>一句话：</b>通过贝叶斯锚定的代码与测试共进化实现代码生成——维护种群而非把测试当绝对真理，避免误杀有效解。</p>
-        <p class="sub"><b>核心思路：</b>现有 LLM 代码生成把生成的测试当绝对 ground truth，但测试本身可能有 bug，会误杀有效解。BACE 的核心创新：维护代码和测试两个种群，用贝叶斯方法锚定两者的质量，避免"测试错 => 代码错"的级联误判。实验覆盖多个编程任务，验证了相比 AgentCoder 等方法的优越性。<br><b>启发：</b>代码生成从"生成-测试-淘汰"向"共进化"演进——种群思想让系统更鲁棒。</p>
-        <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2603.28653" target="_blank">arXiv 2603.28653</a></div>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="title">ZeroCoder: Can LLMs Improve Code Generation Without Ground Truth Labels</div>
-        <p class="one"><b>一句话：</b>无标签代码生成——在无 ground truth 标签的设置下，用 selector 提升代码质量。</p>
-        <p class="sub"><b>核心思路：</b>代码生成通常依赖 ground truth 标签来评估和筛选，但获取标签成本高。ZeroCoder 探索无标签设置下的代码生成：用 LLM 自身的输出作为"伪标签"，通过 selector 选择最佳输出。实验以 Qwen2.5-Coder-7B-Instruct 为基础，在完全无标签设置下，使用 selector B4 可比基线提升 14.5%（相对提升）。<br><b>启发：</b>无标签学习在代码生成中是可行的——关键在于设计有效的"自选择"机制。</p>
-        <div class="item-foot">
-          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.07864" target="_blank">arXiv 2604.07864</a></div>
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.09443" target="_blank">arXiv 2604.09443</a></div>
         </div>
       </div>
 
@@ -257,8 +242,8 @@
 
       <div class="item">
         <div class="title">From Reasoning to Agentic: Credit Assignment in Reinforcement Learning over LLMs</div>
-        <p class="one"><b>一句话：</b>从推理到 Agentic 的信用分配——分析 GRPO、PURE、SPO、SPRO 等方法在数学推理任务中的适用性。</p>
-        <p class="sub"><b>核心思路：</b>RL 在 LLM 上的应用日趋广泛，但"信用分配"——即如何把成功归因到正确的推理步骤——仍是核心挑战。论文系统分析了几种 RL 方法：GRPO（baseline）、PURE、SPO、SPRO 在数学推理任务（GSM8K, MATH）上的表现。关键发现：短 CoT（Chain of Thought）、可验证的确定性任务是当前 RL 方法的"甜点"；PRM（Process Reward Model）监督在这些场景下容易获取。实验还比较了不同方法在复杂度和泛化性上的权衡。<br><b>启发：</b>信用分配是 RL + LLM 的核心瓶颈——不同任务需要不同的分配策略，没有"一刀切"的方案。</p>
+        <p class="one"><b>一句话：</b>从推理到 Agentic 的信用分配——分析 GRPO、PURE、SPO、SPRO 等方法。</p>
+        <p class="sub"><b>核心思路：</b>RL 在 LLM 上的核心挑战是信用分配——如何把成功归因到正确的推理步骤。论文系统分析 GRPO、PURE、SPO、SPRO 在数学推理任务上的表现。关键发现：短 CoT、可验证的确定性任务是 RL 方法的"甜点"。<br><b>启发：</b>信用分配是 RL+LLM 的核心瓶颈——不同任务需要不同策略。</p>
         <div class="item-foot">
           <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.09459" target="_blank">arXiv 2604.09459</a></div>
         </div>
@@ -266,8 +251,23 @@
 
     </div>
 
+    <!-- RAG vs 学习 -->
+    <div class="section" id="sec-rag">
+      <h3>RAG vs 学习</h3>
+
+      <div class="item">
+        <div class="title">RAG or Learning? Understanding the Limits of LLM Adaptation under Continuous Knowledge Drift</div>
+        <p class="one"><b>一句话：</b>连续知识漂移下 RAG 与微调的选择——何时用 RAG，何时微调？</p>
+        <p class="sub"><b>核心思路：</b>知识随时间变化（连续知识漂移），模型可能输出过时或不一致的推理。论文研究 RAG vs 微调在连续知识漂移下的表现。关键发现：RAG 在高漂移频率下更优，微调在低频率下更省资源。<br><b>启发：</b>没有"一刀切"——漂移频率决定技术选择。</p>
+        <div class="item-foot">
+          <div class="btns"><a class="btn btn-primary" href="https://arxiv.org/abs/2604.05096" target="_blank">arXiv 2604.05096</a></div>
+        </div>
+      </div>
+
+    </div>
+
     <div class="foot">
-      生成：AI 自动化检索 · 自进化 / 记忆系统 / 多模型编排 / 代码生成专题 · 2026-04-16
+      生成：AI 自动化检索 · 自进化 / 经验压缩 / 指令分层专题 · 2026-04-21
     </div>
   </div>
 </body>
